@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Logo Showcase
- * Plugin URI: https://www.themepoints.com/shop/logo-showcase-pro
+ * Plugin URI: https://themepoints.com/logoshowcase/
  * Description: Logo Showcase plugin allow to Display a list of clients, supporters, partners or sponsors logos in your WordPress website easily.
- * Version: 3.0.0
+ * Version: 3.0.1
  * Author: Themepoints
  * Author URI: https://themepoints.com
  * TextDomain: logoshowcase
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define constants for plugin paths
-define( 'LOGO_SHOWCASE_VERSION', '3.0.0' );
+define( 'LOGO_SHOWCASE_VERSION', '3.0.1' );
 define( 'LOGO_SHOWCASE_WP_PLUGIN_PATH', WP_PLUGIN_URL . '/' . plugin_basename( dirname( __FILE__ ) ) . '/' );
 define( 'logo_showcase_wp_plugin_dir', plugin_dir_path( __FILE__ ) );
 add_filter( 'widget_text', 'do_shortcode' );
@@ -87,7 +87,7 @@ register_activation_hook( __FILE__, 'themepoints_logo_showcase_activation_for_ba
 
 // Activation hook
 function logo_showcase_wordpress_get_version_link( $links ) {
-   $links[] = '<a style="color:red;font-weight:bold;" href="https://www.themepoints.com/shop/logo-showcase-pro" target="_blank">Upgrade to Pro!</a>';
+   $links[] = '<a style="color:red;font-weight:bold;" href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade to Pro!</a>';
    return $links;
 }
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'logo_showcase_wordpress_get_version_link' );

@@ -210,7 +210,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="radio-five" name="logo_showcase_columns_post_themes" value="theme3" <?php if ( $logo_showcase_columns_post_themes == 'theme3' ) echo 'checked'; ?>/>
 										<label for="radio-five"><?php _e( 'List', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>
-									<span class="logo_manager_hint">Select a layout to display the Logo Showcase. To unlock all Layouts, <a href="https://www.themepoints.com/shop/logo-showcase-pro" target="_blank">Upgrade To Pro!</a></span>
+									<span class="logo_manager_hint">Select a layout to display the Logo Showcase. To unlock all Layouts, <a href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade To Pro!</a></span>
 								</td>
 							</tr><!-- End Logo Showcase Theme -->
 
@@ -404,7 +404,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="desc_right" name="logo_showcase_columns_desc_position" value="right" <?php if ( $logo_showcase_columns_desc_position == 'right' ) echo 'checked'; ?>/>
 										<label for="desc_right"><?php _e( 'Right', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Choose Your Description Position.','logoshowcase' ); ?> To unlock all, <a href="https://www.themepoints.com/shop/logo-showcase-pro" target="_blank">Upgrade To Pro!</a></span>
+									<span class="logo_manager_hint"><?php echo __( 'Choose Your Description Position.','logoshowcase' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade To Pro!</a></span>
 								</td>
 							</tr><!-- End Description Content Position -->
 
@@ -732,7 +732,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" disabled id="navigation_style_center" name="logo_showcase_navigation_style" value="50" <?php if ( $logo_showcase_navigation_style == '50' || $logo_showcase_navigation_style == '' ) echo 'checked'; ?>/>
 										<label for="navigation_style_center"><?php _e( 'Round', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Set the style of navigation tool.' ); ?> To unlock all, <a href="https://www.themepoints.com/shop/logo-showcase-pro" target="_blank">Upgrade To Pro!</a></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set the style of navigation tool.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade To Pro!</a></span>
 								</td>
 							</tr> <!-- End Navigation Style -->
 
@@ -812,7 +812,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="pagination_align_right" name="logo_showcase_pagination_position" value="right" <?php if ( $logo_showcase_pagination_position == 'right' ) echo 'checked'; ?>/>
 										<label for="pagination_align_right"><?php _e( 'Right', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>	
-									<span class="logo_manager_hint"><?php echo __( 'Set the alignment of pagination.' ); ?> To unlock all, <a href="https://www.themepoints.com/shop/logo-showcase-pro" target="_blank">Upgrade To Pro!</a></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set the alignment of pagination.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade To Pro!</a></span>
 								</td>
 							</tr><!-- End Pagination Position -->
 

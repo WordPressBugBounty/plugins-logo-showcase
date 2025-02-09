@@ -1,10 +1,10 @@
 === Logo Showcase ===
 Contributors: themepoints
-Donate link: https://themepoints.com
+Donate link: https://themepoints.com/logoshowcase/
 Tags:  logo, logo showcase, logo slider, logo carousel, slider, responsive carousel, showcase logo, image carousel, logo showcase, logo slide, logo slide show, logo slideshow, sponsors, carousel
 Requires at least: 4.0
-Tested up to: 6.6.1
-Stable tag: 3.0.0
+Tested up to: 6.7.1
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Logo Showcase is a lightweight & Responsive plugin to Display a list of clients,
 https://youtu.be/lvX5GOl1LvI?list=PLMsHgGK2r5CEA3e3uJNP0VEGpustxjkbx
 
 <ul>
-	<li><a href="https://themepoints.com/shop/logo-showcase-pro">Premium Version</a></li>
+	<li><a href="https://themepoints.com/logoshowcase">Premium Version</a></li>
 	<li><a href="https://themepoints.com/logoshowcase">Live Demo</a></li>
 	<li><a href="https://themepoints.com/questions-answer/">Quick Support</a></li>
 </ul>
@@ -38,7 +38,7 @@ We Completly Update the plugin admin UI and update the plugin version. If you fa
 * Logo Description Option.
 * logo Uploader Option.
 
-<h3> KEY FEATURES </h3>
+<h3> Key Features </h3>
 
 * Easy & Lightweight.
 * Clean Design & Code.
@@ -145,10 +145,9 @@ We Completly Update the plugin admin UI and update the plugin version. If you fa
 
 * Unlock All the Features.
 * Online Documentation.
-* No Hidden Charge.
-* Unlimited Domain Support.
+* No Hidden Charges.
 * 24/7 Dedicated Support Forum.
-* Life Time Self Hosted Plugin Updated Enabled.
+* Auto Updated Enabled.
 
 
 == Installation ==
@@ -189,6 +188,11 @@ First create a logo showcase list then copy shortcode into shortcode <code>Ex: [
 
 
 == Changelog ==
+
+= 3.0.1 =
+* Check: Latest Version Compatibility.
+* Update: Update Options Page.
+* New: Update CSS.
 
 = 3.0.0 =
 * Check: Latest Version Compatibility.

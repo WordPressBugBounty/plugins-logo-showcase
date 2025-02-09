@@ -29,7 +29,7 @@
 			<li class="list-item">
 				<h3><?php _e( 'Buy Us A Coffee', 'logoshowcase' ); ?></h3>
 				<p>We hope you're enjoying our plugin! We put a lot of effort into providing the best experience possible. If you're feeling generous and would like to show your appreciation, we'd be thrilled if you could consider buying us a coffee as a way of saying thank you.</p>
-				<div class="tps-btn"><a target="_blank" href="https://www.themepoints.com/shop/logo-showcase-pro/"><?php _e( 'Donate Now', 'logoshowcase' ); ?></a></div>
+				<div class="tps-btn"><a target="_blank" href="https://themepoints.com/logoshowcase/"><?php _e( 'Donate Now', 'logoshowcase' ); ?></a></div>
 			</li>
 		</ul>
 	</div>
