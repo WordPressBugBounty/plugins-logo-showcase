@@ -384,7 +384,6 @@ div.wrap .team-manager-admin-area{
   }
 }
 
-
 /* Wide Mobile Layout: 480px. */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .single-team-social-icons {
@@ -410,7 +409,6 @@ div.wrap .team-manager-admin-area{
       width: 95%;
   }
 }
-
 
 /*big from small mobile, small from wide mobile*/
 @media only screen and (min-width: 380px) and (max-width: 480px) {

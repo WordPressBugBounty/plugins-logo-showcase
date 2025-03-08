@@ -1,6 +1,6 @@
 <?php
 	if ( ! defined( 'ABSPATH' ) ) {
-		die( "Can't load this file directly" );
+	    exit;
 	}
 
 	// Register logo showcase Post Type
@@ -73,3 +73,58 @@
 	  	return $title;
 	}
 	add_filter( 'enter_title_here', 'logo_showcase_wordpress_title' );
+
+
+	function logoshowcase_wp_shortcode_section($post) {
+	    // Show only for 'tplogoshowcase' post type
+	    if ($post->post_type !== 'tplogoshowcase') {
+	        return;
+	    }
+
+	    // Generate the dynamic shortcode
+	    $shortcode = "[logo_showcase id='" . $post->ID . "']";
+	    $php_code = '<?php echo do_shortcode("[logo_showcase id=' . $post->ID . ']"); ?>';
+
+	    ?>
+	    <div style="padding: 15px 15px 25px 15px; border: 1px solid #ddd; background: #f9f9f9; margin-top: 15px;">
+		    <div style="display: flex; gap: 20px;">
+
+			    <div style="width: 50%;">
+			        <p>
+			            <strong><?php _e( 'Shortcode','logoshowcase' ); ?>:</strong>
+			            <span id="shortcode-notice" style="color: green; display: none; margin-left: 10px;"><?php _e( 'Shortcode copied!','logoshowcase' ); ?></span>
+			        </p>
+			        <p class="option-info"><?php _e('Click to copy the shortcode and paste it into a page or post to display Logo Showcase.','logoshowcase' ); ?></p>
+			        <input type="text" id="shortcode-text" style="width:100%; cursor:pointer; box-shadow: none; border:none;outline:none;border-radius: 0" value="<?php echo esc_attr($shortcode); ?>" readonly onclick="copyToClipboard(this, 'shortcode-notice')">
+			    </div>
+
+			    <div style="width: 50%;">
+			        <p>
+			            <strong><?php _e( 'PHP Code for Theme Files','logoshowcase' ); ?>:</strong>
+			            <span id="php-notice" style="color: green; display: none; margin-left: 10px;"><?php _e( 'PHP code copied!','logoshowcase' ); ?></span>
+			        </p>
+			        <p class="option-info"><?php _e('Click to copy the PHP code and use it in your theme files to display Logo Showcase.','logoshowcase' ); ?></p>
+			        <input type="text" id="php-code-text" style="width:100%; cursor:pointer; box-shadow: none; border:none;outline:none;border-radius: 0" value="<?php echo esc_attr($php_code); ?>" readonly onclick="copyToClipboard(this, 'php-notice')">
+			    </div>
+
+		    </div>
+	    </div>
+
+	    <script>
+	        function copyToClipboard(inputField, noticeId) {
+	            inputField.select();
+	            navigator.clipboard.writeText(inputField.value);
+
+	            // Show copied message beside the label
+	            var notice = document.getElementById(noticeId);
+	            notice.style.display = "inline";
+
+	            // Hide the message after 2 seconds
+	            setTimeout(function() {
+	                notice.style.display = "none";
+	            }, 2000);
+	        }
+	    </script>
+	    <?php
+	}
+	add_action('edit_form_after_title', 'logoshowcase_wp_shortcode_section');

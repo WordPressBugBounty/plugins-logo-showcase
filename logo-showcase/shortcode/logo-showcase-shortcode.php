@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-	die( "Can't load this file directly" );
+    exit;
 }
 
 /*==========================================================================
@@ -12,7 +12,9 @@ function logo_showcase_wordpress_shortcode_register( $atts, $content = null ) {
 			'id' => "",
 		), $atts 
 	);
+
 	global $post;
+	
 	$postid = $atts['id'];
 	
 	$featuress                                 = get_post_meta( $postid, 'logo_showcase_columns');
