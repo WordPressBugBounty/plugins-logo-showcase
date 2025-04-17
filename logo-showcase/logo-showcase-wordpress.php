@@ -3,7 +3,7 @@
  * Plugin Name: Logo Showcase
  * Plugin URI: https://themepoints.com/logoshowcase/
  * Description: Logo Showcase plugin allow to Display a list of clients, supporters, partners or sponsors logos in your WordPress website easily.
- * Version: 3.0.3
+ * Version: 3.0.4
  * Author: Themepoints
  * Author URI: https://themepoints.com
  * TextDomain: logoshowcase
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define constants for plugin paths
-define( 'LOGO_SHOWCASE_VERSION', '3.0.3' );
+define( 'LOGO_SHOWCASE_VERSION', '3.0.4' );
 define( 'LOGO_SHOWCASE_WP_PLUGIN_PATH', WP_PLUGIN_URL . '/' . plugin_basename( dirname( __FILE__ ) ) . '/' );
 define( 'logo_showcase_wp_plugin_dir', plugin_dir_path( __FILE__ ) );
 add_filter( 'widget_text', 'do_shortcode' );

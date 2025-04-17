@@ -273,7 +273,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 
 							<tr valign="top" id="grid_col_controller4" style="<?php if ( $logo_showcase_columns_post_themes != 'theme2') { echo "display:none;"; }?>">
 								<th scope="row">
-									<label for="grid_column_pbottom"><?php _e( 'Margin Between Members', 'logoshowcase' ); ?></label>
+									<label for="grid_column_pbottom"><?php _e( 'Margin Between Logos', 'logoshowcase' ); ?></label>
 								</th>
 								<td style="vertical-align: middle;">
 									<input size="5" type="number" name="grid_column_pbottom" id="grid_column_pbottom" maxlength="3" class="timezone_string" value="<?php if ( $grid_column_pbottom != '' ) { echo $grid_column_pbottom; } else { echo '10'; } ?>">
@@ -347,7 +347,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="tp_img_hide" name="logo_showcase_free_show_title_hide" value="0" <?php if ( $logo_showcase_free_show_title_hide == '0' ) echo 'checked'; ?>/>
 										<label for="tp_img_hide" class="hide_logo_title"><?php _e( 'Hide', 'logoshowcase' ); ?></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __('Show/Hide logo Title.', 'logoshowcase' ); ?></span>
+									<span class="logo_manager_hint"><?php echo __('Show or Hide the logo Title.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Title Show/Hide -->
 
@@ -406,7 +406,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="desc_hide" name="logo_showcase_free_show_desc_hide" value="0" <?php if ( $logo_showcase_free_show_desc_hide == '0' ) echo 'checked'; ?>/>
 										<label for="desc_hide" class="hide_logo_desc"><?php _e( 'Hide', 'logoshowcase' ); ?></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Show/Hide logo Description.', 'logoshowcase' ); ?><span class="only_pro_v">(Only Pro)</span></span>
+									<span class="logo_manager_hint"><?php echo __( 'Show or Hide the logo Description.', 'logoshowcase' ); ?><span class="only_pro_v">(Only Pro)</span></span>
 								</td>
 							</tr> <!-- End Description Show/Hide -->
 
@@ -504,7 +504,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" disabled id="tooltip_disable" name="logo_showcase_columns_show_hide_tooltips" value="2" <?php if ( $logo_showcase_columns_show_hide_tooltips == '2' ) echo 'checked'; ?>/>
 										<label for="tooltip_disable" class="hide_logo_tooltip"><?php _e( 'Disable', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Enable/Disable Tooltip.', 'logoshowcase' ); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Show or Hide the logo Tooltip.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Tooltip Show/Hide -->
 
@@ -559,7 +559,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="autoplay_false" name="logo_showcase_columns_show_auto_play" value="false" <?php if ( $logo_showcase_columns_show_auto_play == 'false' ) echo 'checked'; ?>/>
 										<label for="autoplay_false" class="autoplay_false"><?php _e( 'No', 'logoshowcase' ); ?></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Enable/Disable auto play.', 'logoshowcase' ); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Enable or Disable autoplay.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Slide Autoplay -->
 
@@ -568,7 +568,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align: middle;" class="auto_play">
 									<input type="range" step="100" min="100" max="5000" value="<?php  if ( $logo_showcase_columns_show_slide_speed !='' ) { echo $logo_showcase_columns_show_slide_speed; } else{ echo '700'; } ?>" class="slider" id="myRange"><br>
 									<input size="5" type="text" name="logo_showcase_columns_show_slide_speed" id="logo_showcase_columns_show_slide_speed" maxlength="4" class="timezone_string" readonly  value="<?php  if ( $logo_showcase_columns_show_slide_speed !='' ) {echo $logo_showcase_columns_show_slide_speed; }else{ echo '700'; } ?>">
-									<span class="logo_manager_hint"><?php echo __( 'Select a value for sliding speed.', 'logoshowcase' ); ?></span>							
+									<span class="logo_manager_hint"><?php echo __( 'Set the speed of the slide transition (in milliseconds).', 'logoshowcase' ); ?></span>							
 								</td>
 							</tr><!-- End SlideSpeed -->
 
@@ -581,7 +581,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="stop_hover_false" name="stop_hover_play" value="false" <?php if ( $stop_hover_play == 'false' ) echo 'checked'; ?>/>
 										<label for="stop_hover_false" class="stop_hover_false"><?php _e( 'No', 'logoshowcase' ); ?></label>
 									</div>	
-									<span class="logo_manager_hint"><?php echo __( 'Enable/Disable slider pause on hover.', 'logoshowcase' ); ?></span>						
+									<span class="logo_manager_hint"><?php echo __( 'Enable or disable slider pause on hover.', 'logoshowcase' ); ?></span>						
 								</td>
 							</tr><!-- End Stop On Hover -->
 
@@ -608,7 +608,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 
 							<tr valign="top">
 							    <th scope="row">
-							        <label for="logo_showcase_columns_show_items"><?php echo __('Member Per Slide', 'logoshowcase'); ?></label>
+							        <label for="logo_showcase_columns_show_items"><?php echo __('Logo Per Slide', 'logoshowcase'); ?></label>
 							    </th>
 							    <td style="vertical-align:middle;">
 									<div class="pic-device-columns">
@@ -648,7 +648,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 									        <input type="number" name="itemsmobile" id="itemsmobile" value="<?php echo esc_attr($itemsmobile); ?>" min="1" max="10">
 									    </label>
 									</div>
-									<span class="logo_manager_hint toss"><?php echo __('Set members per slide at a time.', 'logoshowcase'); ?></span>
+									<span class="logo_manager_hint toss"><?php echo __('Set the number of logos to display per slide for each device.', 'logoshowcase'); ?></span>
 							    </td>
 							</tr>
 							<!-- End Choose Team Column -->
@@ -685,7 +685,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="loop_false" name="loop" value="false" <?php if ( $loop == 'false' ) echo 'checked'; ?>/>
 										<label for="loop_false" class="loop_false"><?php _e( 'No', 'logoshowcase' ); ?></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Enable/Disable infinite loop mode.', 'logoshowcase' ); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Enable or Disable infinite loop mode.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr> <!-- End Loop -->
 
