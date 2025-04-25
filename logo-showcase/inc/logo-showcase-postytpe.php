@@ -74,7 +74,6 @@
 	}
 	add_filter( 'enter_title_here', 'logo_showcase_wordpress_title' );
 
-
 	function logoshowcase_wp_shortcode_section($post) {
 	    // Show only for 'tplogoshowcase' post type
 	    if ($post->post_type !== 'tplogoshowcase') {
@@ -84,11 +83,10 @@
 	    // Generate the dynamic shortcode
 	    $shortcode = "[logo_showcase id='" . $post->ID . "']";
 	    $php_code = '<?php echo do_shortcode("[logo_showcase id=' . $post->ID . ']"); ?>';
-
 	    ?>
+	    
 	    <div style="padding: 15px 15px 25px 15px; border: 1px solid #ddd; background: #f9f9f9; margin-top: 15px;">
 		    <div style="display: flex; gap: 20px;">
-
 			    <div style="width: 50%;">
 			        <p>
 			            <strong><?php _e( 'Shortcode','logoshowcase' ); ?>:</strong>
@@ -106,7 +104,6 @@
 			        <p class="option-info"><?php _e('Click to copy the PHP code and use it in your theme files to display Logo Showcase.','logoshowcase' ); ?></p>
 			        <input type="text" id="php-code-text" style="width:100%; cursor:pointer; box-shadow: none; border:none;outline:none;border-radius: 0" value="<?php echo esc_attr($php_code); ?>" readonly onclick="copyToClipboard(this, 'php-notice')">
 			    </div>
-
 		    </div>
 	    </div>
 
