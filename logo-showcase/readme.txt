@@ -3,8 +3,8 @@ Contributors: themepoints
 Donate link: https://themepoints.com/logoshowcase
 Tags:  logo, logo showcase, logo slider, logo carousel, slider, responsive carousel, showcase logo, image carousel, logo showcase, logo slide, logo slide show, logo slideshow, sponsors, carousel
 Requires at least: 4.0
-Tested up to: 6.8
-Stable tag: 3.0.5
+Tested up to: 6.8.1
+Stable tag: 3.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -191,9 +191,8 @@ First create a logo showcase list then copy shortcode into shortcode <code>Ex: [
 
 == Changelog ==
 
-= 3.0.5 =
-* Check: Latest Version Compatibility.
-* Fix Cross Site Scripting Issue.
+= 3.0.6 =
+* Added: Added New Options.
 * Update Option Page.
 
 = 3.0.4 =

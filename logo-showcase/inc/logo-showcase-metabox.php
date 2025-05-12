@@ -41,7 +41,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 	$logo_showcase_item_roderwidth             = get_post_meta( $post->ID, 'logo_showcase_item_roderwidth', true );
 	$logo_showcase_item_padding                = get_post_meta( $post->ID, 'logo_showcase_item_padding', true );
 	$grid_column_pleft                         = get_post_meta( $post->ID, 'grid_column_pleft', true );
-	$grid_column_pbottom                       = get_post_meta( $post->ID, 'grid_column_pbottom', true );	
+	$grid_column_pbottom                       = get_post_meta( $post->ID, 'grid_column_pbottom', true );
 	$logo_showcase_columns_border_hover_color  = get_post_meta( $post->ID, 'logo_showcase_columns_border_hover_color', true );
 	$logo_showcase_columns_show_items          = get_post_meta( $post->ID, 'logo_showcase_columns_show_items', true) ?: '3';
 	$itemsdesktop                              = get_post_meta( $post->ID, 'itemsdesktop', true) ?: '3';
@@ -157,7 +157,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 									<a class="button remove-row" href="#"><?php echo __( 'Delete', 'logoshowcase' ); ?></span></a>
 								</div>
 							</div>
-							<?php endif; ?>	
+							<?php endif; ?>
 							<!-- empty hidden one for jQuery -->
 							<div class="ui-state-default empty-row screen-reader-text">
 								<div class="tpsl-repeater-logo-wrapper">
@@ -195,7 +195,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 		<li style="<?php if ( $nav_value == 2 ) { echo "display: block;"; } else { echo "display: none;"; } ?>" class="box2 tab-box <?php if ( $nav_value == 2 ) { echo "active"; } ?>">
 			<div class="wrap">
 				<div class="option-box">
-					<div class="wrap">				
+					<div class="wrap">
 						<table class="form-table">
 							<tr valign="top">
 								<th scope="row"><label for="logo_showcase_columns_post_themes"><?php echo __( 'Layout', 'logoshowcase' ); ?></label></th>
@@ -460,7 +460,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<th scope="row"><label for="logo_showcase_columns_image_effect"><?php echo __( 'Image Effects', 'logoshowcase' ); ?></label></th>
 								<td style="vertical-align:middle;">
 									<select class="timezone_string" name="logo_showcase_columns_image_effect">
-										<option value="1" <?php if ( $logo_showcase_columns_image_effect == '1' ) echo "selected"; ?> >Normal</option>		
+										<option value="1" <?php if ( $logo_showcase_columns_image_effect == '1' ) echo "selected"; ?> >Normal</option>
 										<option disabled value="2" <?php if ( $logo_showcase_columns_image_effect == '2' ) echo "selected"; ?> >Grayscale (Pro)</option>
 										<option disabled value="3" <?php if ( $logo_showcase_columns_image_effect == '3' ) echo "selected"; ?> >Blur (Pro)</option>
 										<option disabled value="4" <?php if ( $logo_showcase_columns_image_effect == '4' ) echo "selected"; ?> >Blur & Grayscale (Pro)</option>
@@ -486,7 +486,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<th scope="row"><label for="logo_showcase_columns_hover_effect"><?php echo __( 'Image Animation', 'logoshowcase' ); ?></label></th>
 								<td style="vertical-align:middle;">
 									<select class="timezone_string" name="logo_showcase_columns_hover_effect">
-										<option value="0" <?php if ( $logo_showcase_columns_hover_effect == '0' ) echo "selected"; ?> >Normal</option>		
+										<option value="0" <?php if ( $logo_showcase_columns_hover_effect == '0' ) echo "selected"; ?> >Normal</option>
 										<option value="1" <?php if ( $logo_showcase_columns_hover_effect == '1' ) echo "selected"; ?> >ZoomIn</option>
 										<option disabled value="2" <?php if ( $logo_showcase_columns_hover_effect == '2' ) echo "selected"; ?> >ZoomOut (Pro)</option>
 										<option disabled value="3" <?php if ( $logo_showcase_columns_hover_effect == '3' ) echo "selected"; ?> >SlideUp (Pro)</option>
@@ -512,7 +512,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<th scope="row"><label for="logo_showcase_tooltips_positions"><?php echo __( 'Tooltip Position', 'logoshowcase' ); ?></label></th>
 								<td style="vertical-align:middle;">
 									<select class="timezone_string" name="logo_showcase_tooltips_positions">
-										<option value="top" <?php if ( $logo_showcase_tooltips_positions == 'top' ) echo "selected"; ?> >Top</option>		
+										<option value="top" <?php if ( $logo_showcase_tooltips_positions == 'top' ) echo "selected"; ?> >Top</option>
 										<option disabled value="left" <?php if ( $logo_showcase_tooltips_positions == 'left' ) echo "selected"; ?> >Left (Pro)</option>
 										<option disabled value="right" <?php if ( $logo_showcase_tooltips_positions == 'right' ) echo "selected"; ?> >Right (Pro)</option>
 										<option disabled value="bottom" <?php if ( $logo_showcase_tooltips_positions == 'bottom' ) echo "selected"; ?> >Bottom (Pro)</option>
@@ -539,7 +539,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								</td>
 							</tr><!-- End Tooltip Background Color -->
 
-						</table>		
+						</table>
 					</div>
 				</div>
 			</div>
@@ -548,7 +548,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 		<li style="<?php if ( $nav_value == 3 ) { echo "display: block;"; } else { echo "display: none;"; } ?>" class="box3 tab-box <?php if ( $nav_value == 3 ) { echo "active"; } ?>">
 			<div class="wrap">
 				<div class="option-box">
-					<div class="wrap">				
+					<div class="wrap">
 						<table class="form-table">
 							<tr valign="top">
 								<th scope="row"><label for="logo_showcase_columns_show_auto_play"><?php echo __( 'Autoplay', 'logoshowcase' ); ?></label></th>
@@ -568,7 +568,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align: middle;" class="auto_play">
 									<input type="range" step="100" min="100" max="5000" value="<?php  if ( $logo_showcase_columns_show_slide_speed !='' ) { echo $logo_showcase_columns_show_slide_speed; } else{ echo '700'; } ?>" class="slider" id="myRange"><br>
 									<input size="5" type="text" name="logo_showcase_columns_show_slide_speed" id="logo_showcase_columns_show_slide_speed" maxlength="4" class="timezone_string" readonly  value="<?php  if ( $logo_showcase_columns_show_slide_speed !='' ) {echo $logo_showcase_columns_show_slide_speed; }else{ echo '700'; } ?>">
-									<span class="logo_manager_hint"><?php echo __( 'Set the speed of the slide transition (in milliseconds).', 'logoshowcase' ); ?></span>							
+									<span class="logo_manager_hint"><?php echo __( 'Set the speed of the slide transition (in milliseconds).', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End SlideSpeed -->
 
@@ -580,8 +580,8 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<label for="stop_hover_true"><?php _e( 'Yes', 'logoshowcase' ); ?></label>
 										<input type="radio" id="stop_hover_false" name="stop_hover_play" value="false" <?php if ( $stop_hover_play == 'false' ) echo 'checked'; ?>/>
 										<label for="stop_hover_false" class="stop_hover_false"><?php _e( 'No', 'logoshowcase' ); ?></label>
-									</div>	
-									<span class="logo_manager_hint"><?php echo __( 'Enable or disable slider pause on hover.', 'logoshowcase' ); ?></span>						
+									</div>
+									<span class="logo_manager_hint"><?php echo __( 'Enable or disable slider pause on hover.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Stop On Hover -->
 
@@ -787,8 +787,8 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<label for="pagination_true"><?php _e( 'Yes', 'logoshowcase' ); ?></label>
 										<input type="radio" id="pagination_false" name="logo_showcase_pagination" value="false" <?php if ( $logo_showcase_pagination == 'false' ) echo 'checked'; ?>/>
 										<label for="pagination_false" class="pagination_false"><?php _e( 'No', 'logoshowcase' ); ?></label>
-									</div>	
-									<span class="logo_manager_hint"><?php echo __( 'Show/Hide Pagination.', 'logoshowcase' ); ?></span>						
+									</div>
+									<span class="logo_manager_hint"><?php echo __( 'Show/Hide Pagination.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Pagination Show/Hide -->
 
@@ -796,7 +796,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<th scope="row"><label for="logo_showcase_pagination_style"><?php echo __( 'Pagination Style', 'logoshowcase' ); ?></label></th>
 								<td style="vertical-align:middle;">
 									<select class="timezone_string" name="logo_showcase_pagination_style">
-										<option value="1" <?php if ( $logo_showcase_pagination_style == '1' ) echo "selected"; ?> ><?php _e( 'Round', 'logoshowcase' ); ?></option>		
+										<option value="1" <?php if ( $logo_showcase_pagination_style == '1' ) echo "selected"; ?> ><?php _e( 'Round', 'logoshowcase' ); ?></option>
 										<option disabled value="2" <?php if ( $logo_showcase_pagination_style == '2' ) echo "selected"; ?> ><?php _e( 'Square (Pro)', 'logoshowcase' ); ?></option>
 										<option disabled value="3" <?php if ( $logo_showcase_pagination_style == '3' ) echo "selected"; ?> ><?php _e( 'Line (Pro)', 'logoshowcase' ); ?></option>
 									</select><br/>
@@ -814,7 +814,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<label for="pagination_align_center"><?php _e( 'Center', 'logoshowcase' ); ?></label>
 										<input type="radio" id="pagination_align_right" name="logo_showcase_pagination_position" value="right" <?php if ( $logo_showcase_pagination_position == 'right' ) echo 'checked'; ?>/>
 										<label for="pagination_align_right"><?php _e( 'Right', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
-									</div>	
+									</div>
 									<span class="logo_manager_hint"><?php echo __( 'Set the alignment of pagination dots.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade To Pro!</a></span>
 								</td>
 							</tr><!-- End Pagination Position -->
@@ -849,7 +849,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 
 /*==========================================================================
 	When the post is saved, saves our custom data
-==========================================================================*/	
+==========================================================================*/
 
 function logo_showcase_wordpress_save_postdata( $post_id ) {
 
@@ -874,7 +874,6 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 		}
 	}
 
-
     // Check if this is an autosave
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
         return $post_id;
@@ -892,7 +891,6 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 	if ( ! wp_verify_nonce( $_POST['logo_showcase_wordpress_dynamicMeta_noncename'], plugin_basename( __FILE__ ) ) )
 		return;
 	// OK, we're authenticated: we need to find and save the data
-
 
 	// Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST[ 'logo_showcase_columns_post_themes' ] ) ) {

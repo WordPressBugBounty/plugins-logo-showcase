@@ -6,8 +6,8 @@
 
 <div class="wraper doc-suport">
 	<div class="doc-support-header">
-		<h1><?php _e( 'Logo Showcase', 'logoshowcase' ); ?> </h1>
-		<p><?php _e( 'Do you have any questions or need assistance? We\'re here to help!', 'logoshowcase' ); ?> </p>
+		<h1><?php _e( 'Logo Showcase', 'logoshowcase' ); ?></h1>
+		<p><?php _e( 'Do you have any questions or need assistance? We\'re here to help!', 'logoshowcase' ); ?></p>
 	</div>
 	<div class="doc-support-content">
 		<ul class="items-area">

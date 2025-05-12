@@ -3,9 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-/*==========================================================================
-	Logo Showcase wordpress shortcode callback function
-==========================================================================*/
 function logo_showcase_wordpress_shortcode_register( $atts, $content = null ) {
 	$atts = shortcode_atts(
 		array(
@@ -13,8 +10,7 @@ function logo_showcase_wordpress_shortcode_register( $atts, $content = null ) {
 		), $atts 
 	);
 
-	global $post;
-	
+	global $post;	
 	$postid = $atts['id'];
 	
 	$featuress                                 = get_post_meta( $postid, 'logo_showcase_columns');

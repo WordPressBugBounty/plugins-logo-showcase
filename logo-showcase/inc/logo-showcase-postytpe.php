@@ -95,7 +95,6 @@
 			        <p class="option-info"><?php _e('Click to copy the shortcode and paste it into a page or post to display Logo Showcase.','logoshowcase' ); ?></p>
 			        <input type="text" id="shortcode-text" style="width:100%; cursor:pointer; box-shadow: none; border:none;outline:none;border-radius: 0" value="<?php echo esc_attr($shortcode); ?>" readonly onclick="copyToClipboard(this, 'shortcode-notice')">
 			    </div>
-
 			    <div style="width: 50%;">
 			        <p>
 			            <strong><?php _e( 'PHP Code for Theme Files','logoshowcase' ); ?>:</strong>
