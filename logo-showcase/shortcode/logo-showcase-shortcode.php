@@ -1,4 +1,5 @@
 <?php
+
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -10,9 +11,9 @@ function logo_showcase_wordpress_shortcode_register( $atts, $content = null ) {
 		), $atts 
 	);
 
-	global $post;	
+	global $post;
 	$postid = $atts['id'];
-	
+
 	$featuress                                 = get_post_meta( $postid, 'logo_showcase_columns');
 	$logo_showcase_columns_post_themes         = get_post_meta( $postid, 'logo_showcase_columns_post_themes', true );
 	$logo_showcase_items_background_color      = get_post_meta( $postid, 'logo_showcase_items_background_color', true );
