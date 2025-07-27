@@ -184,7 +184,7 @@
 			autoplayHoverPause: <?php echo $stop_hover_play ?>,
 			nav 			  : <?php echo $logo_showcase_navigation ?>,
 			dots			  : <?php echo $logo_showcase_pagination ?>,
-			navText           : ['<i class="fa fa-angle-right"></i>', '<i class="fa fa-angle-left"></i>'],
+			navText           : ['<i class="fa fa-angle-right" aria-hidden="true"></i>', '<i class="fa fa-angle-left" aria-hidden="true"></i>'],
 			smartSpeed		  : 450,
 			clone			  :true,
 			responsive		  :{
