@@ -626,6 +626,7 @@ p.lsw-add-logo-items a.button:hover {
 .switch-field input:checked + label.hide_logo_desc,
 .switch-field input:checked + label.autoplay_false,
 .switch-field input:checked + label.stop_hover_false,
+.switch-field input:checked + label.center_mode_false,
 .switch-field input:checked + label.loop_false,
 .switch-field input:checked + label.navigation_false,
 .switch-field input:checked + label.pagination_false,

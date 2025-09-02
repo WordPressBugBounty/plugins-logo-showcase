@@ -65,7 +65,7 @@
 	}
 	add_action( 'manage_tplogoshowcase_posts_custom_column' , 'logo_showcase_add_posts_shortcode_display_7', 10, 2 );
 
-	// Change logo showcase Post Title	
+	// Change logo showcase Post Title
 	function logo_showcase_wordpress_title( $title ) {
 	  	$screen = get_current_screen();
 	  	if  ( 'tplogoshowcase' == $screen->post_type ) {

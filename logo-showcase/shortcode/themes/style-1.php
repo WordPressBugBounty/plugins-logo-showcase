@@ -11,22 +11,30 @@
 	.logo-showcase-main-section-<?php echo esc_attr( $postid ); ?> .lsw-logo-items{
 		background: <?php echo esc_attr( $logo_showcase_items_background_color ) ?>;
 		border: <?php echo esc_attr( $logo_showcase_item_roderwidth ); ?>px solid <?php echo esc_attr( $logo_showcase_columns_border_color ) ?>;
-		width: 100%;
-		height: 100%;
+	    padding: <?php echo esc_attr( $logo_showcase_item_padding ); ?>px;
+		border-radius: <?php echo esc_attr( $logo_showcase_columns_radius ); ?>px;
 		transition: all 0.5s;
-		display: flex;
-		align-items: center;
-		overflow: hidden;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    -webkit-align-items: center;
+	    align-items: center;
+	    display: -webkit-box;
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-justify-content: center;
+	    justify-content: center;
 	}
 	.logo-showcase-main-section-<?php echo esc_attr( $postid ); ?> .lsw-logo-items:hover{
 		background: <?php echo esc_attr( $logo_showcase_items_hover_background ) ?>;
 		border: <?php echo esc_attr( $logo_showcase_item_roderwidth ); ?>px solid <?php echo esc_attr( $logo_showcase_columns_border_hover_color ) ?>;
 	}
 	.logo-showcase-main-section-<?php echo esc_attr( $postid ); ?> .lsw-logo-items-thumb{
-		text-align: center;
-	    padding: <?php echo esc_attr( $logo_showcase_item_padding ); ?>px;
+/*		text-align: center;
 	    position: relative;
-	    overflow: hidden;
+	    overflow: hidden;*/
 	}
 	<?php if( $logo_showcase_columns_image_effect == 1 ){ ?>
 		.logo-showcase-main-section-<?php echo esc_attr( $postid ); ?> .lsw-logo-items-thumb img{
@@ -64,7 +72,7 @@
 	<?php } ?>
 	<?php if ( $logo_showcase_free_show_title_hide == 1 ) { ?>
 		.logo-showcase-main-section-<?php echo esc_attr( $postid ); ?> .lsw-logo-items .lsw-logo-items-title{
-			text-align: center;
+			text-align: <?php echo esc_attr( $logo_showcase_columns_title_position ); ?>;
 			font-size: <?php echo esc_attr( $logo_showcase_columns_title_font_size ); ?>px;
 			font-style:<?php echo esc_attr( $logo_showcase_free_title_font_style ); ?>;
 			color:<?php echo esc_attr( $logo_showcase_columns_title_font_color ); ?>;
@@ -213,7 +221,7 @@
 			  speed : 400,
 			});
 	  	<?php } ?>
-	});	
+	});
 </script>
 
 <div class="logo-showcase-main-section-<?php echo esc_attr( $postid ); ?>">

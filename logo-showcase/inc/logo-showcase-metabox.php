@@ -36,11 +36,13 @@ function logo_showcase_wordpress_inner_custom_box() {
 	$logo_showcase_tooltips_positions          = get_post_meta( $post->ID, 'logo_showcase_tooltips_positions', true );
 	$logo_showcase_tooltips_color              = get_post_meta( $post->ID, 'logo_showcase_tooltips_color', true );
 	$logo_showcase_tooltips_bgcolor            = get_post_meta( $post->ID, 'logo_showcase_tooltips_bgcolor', true );
+	$logo_showcase_free_open_link              = get_post_meta( $post->ID, 'logo_showcase_free_open_link', true );
 	$logo_showcase_items_background_color      = get_post_meta( $post->ID, 'logo_showcase_items_background_color', true );
 	$logo_showcase_items_hover_background      = get_post_meta( $post->ID, 'logo_showcase_items_hover_background', true );
 	$logo_showcase_columns_border_color        = get_post_meta( $post->ID, 'logo_showcase_columns_border_color', true );
 	$logo_showcase_item_roderwidth             = get_post_meta( $post->ID, 'logo_showcase_item_roderwidth', true );
 	$logo_showcase_item_padding                = get_post_meta( $post->ID, 'logo_showcase_item_padding', true );
+	$logo_showcase_columns_radius              = get_post_meta( $post->ID, 'logo_showcase_columns_radius', true );
 	$grid_column_pleft                         = get_post_meta( $post->ID, 'grid_column_pleft', true );
 	$grid_column_pbottom                       = get_post_meta( $post->ID, 'grid_column_pbottom', true );
 	$logo_showcase_columns_border_hover_color  = get_post_meta( $post->ID, 'logo_showcase_columns_border_hover_color', true );
@@ -51,6 +53,8 @@ function logo_showcase_wordpress_inner_custom_box() {
 	$loop                                      = get_post_meta( $post->ID, 'loop', true );
 	$margin                                    = get_post_meta( $post->ID, 'margin', true );
 	$stop_hover_play                           = get_post_meta( $post->ID, 'stop_hover_play', true );
+	$slide_center_mode                         = get_post_meta( $post->ID, 'slide_center_mode', true );
+	$logo_showcase_free_direction        	   = get_post_meta( $post->ID, 'logo_showcase_free_direction', true );
 	$autoplaytimeout                           = get_post_meta( $post->ID, 'autoplaytimeout', true );
 	$logo_showcase_free_show_title_hide        = get_post_meta( $post->ID, 'logo_showcase_free_show_title_hide', true );
 	$logo_showcase_columns_title_position      = get_post_meta( $post->ID, 'logo_showcase_columns_title_position', true );
@@ -72,6 +76,14 @@ function logo_showcase_wordpress_inner_custom_box() {
 	$columndesktop                             = get_post_meta( $post->ID, 'columndesktop', true) ?: '3';
 	$columndesktopsmall                        = get_post_meta( $post->ID, 'columndesktopsmall', true) ?: '2';
 	$columnmobile                              = get_post_meta( $post->ID, 'columnmobile', true) ?: '1';
+	$grid_normal_lists                         = get_post_meta( $post->ID, 'grid_normal_lists', true );
+	$list_normal_column                        = get_post_meta( $post->ID, 'list_normal_column', true) ?: '1';
+	$list_columndesktop                        = get_post_meta( $post->ID, 'list_columndesktop', true) ?: '1';
+	$list_columndesktopsmall                   = get_post_meta( $post->ID, 'list_columndesktopsmall', true) ?: '1';
+	$list_columnmobile                         = get_post_meta( $post->ID, 'list_columnmobile', true) ?: '1';
+	$logo_showcase_table_header_bg             = get_post_meta( $post->ID, 'logo_showcase_table_header_bg', true );
+	$logo_showcase_table_header_text           = get_post_meta( $post->ID, 'logo_showcase_table_header_text', true );
+	$logo_showcase_header_font_size            = get_post_meta( $post->ID, 'logo_showcase_header_font_size', true );
 	$nav_value                                 = get_post_meta( $post->ID, 'nav_value', true );
 	
 	$autoplaytimeout                           = ($autoplaytimeout) ? $autoplaytimeout : 3000;
@@ -106,7 +118,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 												?>
 												<img src="<?php echo esc_url( $full_image_url[0] ); ?>"/>
 											</div>
-											<?php } ?>	
+											<?php } ?>
 											<input type="hidden" class="ask-logo" name="logo_showcase_uploader[]" value="<?php if ( $field['logo_showcase_uploader'] != '' ) echo esc_attr( $field['logo_showcase_uploader'] ); ?>" />
 											<button type="button" class="ask-upload_image_button button" style="display:<?php echo ( $field['logo_showcase_uploader'] ) ? 'none' : 'block'; ?>;"><?php _e( 'Upload', 'logoshowcase' ); ?></button>
 											<button type="button" class="ask-remove_image_button button" style="display:<?php echo ( ! $field['logo_showcase_uploader'] ) ? 'none' : 'block'; ?>;"><?php _e( 'Remove', 'logoshowcase' ); ?></button>
@@ -210,10 +222,99 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<label for="radio-five"><?php _e( 'List', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 										<input type="radio" id="radio-six" name="logo_showcase_columns_post_themes" value="theme4" <?php if ( $logo_showcase_columns_post_themes == 'theme4' ) echo 'checked'; ?>/>
 										<label for="radio-six"><?php _e( 'Ticker Mode', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
+										<input type="radio" id="radio-seven" name="logo_showcase_columns_post_themes" value="theme5" <?php if ( $logo_showcase_columns_post_themes == 'theme5' ) echo 'checked'; ?>/>
+										<label for="radio-seven"><?php _e( 'Table', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>
 									<span class="logo_manager_hint">Select a layout to display the Logo Showcase. To unlock all Layouts, <a href="https://themepoints.com/logoshowcase/" target="_blank"><?php _e( 'Upgrade To Pro!', 'logoshowcase' ); ?></a></span>
 								</td>
 							</tr><!-- End Logo Showcase Theme -->
+
+							<tr valign="top" id="grid_col_controller6" style="<?php if ( $logo_showcase_columns_post_themes != 'theme5') { echo "display:none;"; }?>">
+								<th scope="row" ><label for="logo_showcase_table_header_bg"><?php echo __( 'Table Header Background', 'logoshowcase' ); ?></label></th>
+								<td style="vertical-align:middle;">
+									<input type="text" id="logo_showcase_table_header_bg" name="logo_showcase_table_header_bg" value="<?php if ( $logo_showcase_table_header_bg !='' ) {echo $logo_showcase_table_header_bg; }else{echo "#f8f8f8"; } ?>" class="timezone_string">
+									<br/>
+									<span class="logo_manager_hint"><?php _e( 'Choose logo showcase Table Header Background Color.', 'logoshowcase' ); ?></span>
+								</td>
+							</tr>
+
+							<tr valign="top" id="grid_col_controller7" style="<?php if ( $logo_showcase_columns_post_themes != 'theme5') { echo "display:none;"; }?>">
+								<th scope="row" ><label for="logo_showcase_table_header_text"><?php echo __( 'Table Header Text', 'logoshowcase' ); ?></label></th>
+								<td style="vertical-align:middle;">
+									<input type="text" id="logo_showcase_table_header_text" name="logo_showcase_table_header_text" value="<?php if ( $logo_showcase_table_header_text !='' ) {echo $logo_showcase_table_header_text; }else{echo "#000000"; } ?>" class="timezone_string">
+									<br/>
+									<span class="logo_manager_hint"><?php _e( 'Choose logo showcase Table Header Text Color.', 'logoshowcase' ); ?></span>
+								</td>
+							</tr>
+
+							<tr valign="top" id="grid_col_controller8" style="<?php if ( $logo_showcase_columns_post_themes != 'theme5') { echo "display:none;"; }?>">
+								<th scope="row" ><label for="logo_showcase_header_font_size"><?php echo __( 'Header Font Size', 'logoshowcase' ); ?></label></th>
+								<td style="vertical-align:middle;">
+									<input name='logo_showcase_header_font_size' class='logo-showcase-column-title-font-color' id="logo_showcase_header_font_size" type='number' value='<?php if($logo_showcase_header_font_size!='') echo sanitize_text_field( $logo_showcase_header_font_size ); else echo '18'; ?>' />
+									<br/>
+									<span class="logo_manager_hint"><?php echo __( 'Set the font size for the logo table header.','logoshowcase' ); ?></span>
+								</td>
+							</tr>
+
+							<tr valign="top" id="grid_col_controller5" style="<?php if ( $logo_showcase_columns_post_themes != 'theme3') { echo "display:none;"; }?>">
+								<th scope="row">
+									<label for="grid_normal_lists"><?php _e( 'List Styles', 'logoshowcase' ); ?></label>
+								</th>
+								<td style="vertical-align: middle;">
+									<select name="grid_normal_lists" id="grid_normal_lists" class="timezone_string">
+										<option value="1" <?php if ( isset ( $grid_normal_lists ) ) selected( $grid_normal_lists, '1' ); ?>><?php _e( 'List Default', 'logoshowcase' ); ?></option>
+										<option value="2" <?php if ( isset ( $grid_normal_lists ) ) selected( $grid_normal_lists, '2' ); ?>><?php _e( 'List Right', 'logoshowcase' ); ?></option>
+										<option value="3" <?php if ( isset ( $grid_normal_lists ) ) selected( $grid_normal_lists, '3' ); ?>><?php _e( 'List Center', 'logoshowcase' ); ?></option>
+									</select>
+									<span class="logo_manager_hint"><?php echo __( 'Choose an option for posts column.', 'logoshowcase' ); ?></span>
+								</td>
+							</tr>
+
+							<tr valign="top" id="grid_col_controller9" style="<?php if ( $logo_showcase_columns_post_themes != 'theme3') { echo "display:none;"; }?>">
+								<th scope="row">
+									<label for="list_normal_column"><?php _e( 'List columns', 'logoshowcase' ); ?></label>
+								</th>
+								<td style="vertical-align: middle;">
+									<div class="pic-device-columns">
+									    <!-- Desktop Columns -->
+									    <label for="list_normal_column" class="tp-device-label">
+									        <div class="tp-device-header">
+									            <span class="dashicons dashicons-desktop"></span>
+									            <span><?php echo __( 'Desktop', 'logoshowcase' ); ?></span>
+									        </div>
+									        <input type="number" name="list_normal_column" id="list_normal_column" value="<?php echo esc_attr($list_normal_column); ?>" min="1" max="10">
+									    </label>
+
+									    <!-- Laptop Columns -->
+									    <label for="list_columndesktop" class="tp-device-label">
+									        <div class="tp-device-header">
+									            <span class="dashicons dashicons-laptop"></span>
+									            <span><?php echo __( 'Laptop', 'logoshowcase' ); ?></span>
+									        </div>
+									        <input type="number" name="list_columndesktop" id="list_columndesktop" value="<?php echo esc_attr($list_columndesktop); ?>" min="1" max="10">
+									    </label>
+
+									    <!-- Tablet Columns -->
+									    <label for="list_columndesktopsmall" class="tp-device-label">
+									        <div class="tp-device-header">
+									            <span class="dashicons dashicons-tablet"></span>
+									            <span><?php echo __( 'Tablet', 'logoshowcase' ); ?></span>
+									        </div>
+									        <input type="number" name="list_columndesktopsmall" id="list_columndesktopsmall" value="<?php echo esc_attr($list_columndesktopsmall); ?>" min="1" max="10">
+									    </label>
+
+									    <!-- Mobile Columns -->
+									    <label for="list_columnmobile" class="tp-device-label">
+									        <div class="tp-device-header">
+									            <span class="dashicons dashicons-smartphone"></span>
+									            <span><?php echo __( 'Mobile', 'logoshowcase' ); ?></span>
+									        </div>
+									        <input type="number" name="list_columnmobile" id="list_columnmobile" value="<?php echo esc_attr($list_columnmobile); ?>" min="1" max="10">
+									    </label>
+									</div>
+									<span class="logo_manager_hint"><?php echo __( 'Select the list columns to display for different screen sizes.', 'logoshowcase' ); ?></span>
+								</td>
+							</tr>
 
 							<tr valign="top" id="grid_col_controller" style="<?php if ( $logo_showcase_columns_post_themes != 'theme2') { echo "display:none;"; }?>">
 								<th scope="row">
@@ -340,6 +441,41 @@ function logo_showcase_wordpress_inner_custom_box() {
 							</tr><!-- End Logo Showcase Item Padding -->
 
 							<tr valign="top">
+							    <th scope="row">
+							        <label for="logo_showcase_columns_radius"><?php echo __( 'Item Border Radius', 'logoshowcase' ); ?></label>
+							    </th>
+							    <td style="vertical-align:middle;">
+							        <input
+							            type="range"
+							            name="logo_showcase_columns_radius"
+							            id="logo_showcase_columns_radius"
+							            min="0"
+							            max="100"
+							            step="1"
+							            value="<?php echo ( $logo_showcase_columns_radius !== '' ) ? esc_attr( $logo_showcase_columns_radius ) : '0'; ?>"
+							            oninput="document.getElementById('border-radius-value').innerText = this.value + 'px';"
+							        >
+							        <span id="border-radius-value"><?php echo ( $logo_showcase_columns_radius !== '' ) ? esc_html( $logo_showcase_columns_radius ) . 'px' : '0px'; ?></span>
+							        <br/>
+							        <span class="logo_manager_hint"><?php echo __( 'Choose border radius for logo items.', 'logoshowcase' ); ?></span>
+							    </td>
+							</tr><!-- End Item Border Radius -->
+
+							<tr valign="top">
+								<th scope="row"><label for="logo_showcase_free_direction"><?php echo __( 'Content Direction', 'logoshowcase' ); ?></label></th>
+								<td style="vertical-align:middle;">
+									<div class="switch-field">
+										<input type="radio" id="tp_ltr_direction" name="logo_showcase_free_direction" value="1" <?php if ( $logo_showcase_free_direction == '1' || $logo_showcase_free_direction == '' ) echo 'checked'; ?>/>
+										<label for="tp_ltr_direction"><?php _e( 'LTR', 'logoshowcase' ); ?></label>
+										<input type="radio" id="tp_rtl_direction" name="logo_showcase_free_direction" value="0" <?php if ( $logo_showcase_free_direction == '0' ) echo 'checked'; ?>/>
+										<label for="tp_rtl_direction" class="tp_rtl_direction"><?php _e( 'RTL', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
+									</div>
+									<span class="logo_manager_hint"><?php echo __( 'Reverse the direction of the content.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank"><?php echo __( 'Upgrade To Pro!', 'logoshowcase' ); ?></a></span>
+								</td>
+							</tr>
+							<!-- End Slide Direction -->
+
+							<tr valign="top">
 								<th scope="row"><label for="logo_showcase_free_show_title_hide"><?php echo __( 'Logo Title', 'logoshowcase' ); ?></label></th>
 								<td style="vertical-align:middle;">
 									<div class="switch-field">
@@ -357,13 +493,13 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align:middle;">
 									<div class="switch-field">
 										<input type="radio" id="title_left" name="logo_showcase_columns_title_position" value="left" <?php if ( $logo_showcase_columns_title_position == 'left' ) echo 'checked'; ?>/>
-										<label for="title_left"><?php _e( 'Left', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
+										<label for="title_left"><?php _e( 'Left', 'logoshowcase' ); ?></label>
 										<input type="radio" id="title_center" name="logo_showcase_columns_title_position" value="center" <?php if ( $logo_showcase_columns_title_position == 'center' || $logo_showcase_columns_title_position == '' ) echo 'checked'; ?>/>
 										<label for="title_center"><?php _e( 'Center', 'logoshowcase' ); ?></label>
 										<input type="radio" id="title_right" name="logo_showcase_columns_title_position" value="right" <?php if ( $logo_showcase_columns_title_position == 'right' ) echo 'checked'; ?>/>
-										<label for="title_right"><?php _e( 'Right', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
+										<label for="title_right"><?php _e( 'Right', 'logoshowcase' ); ?></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Set Title text alignment.', 'logoshowcase' ); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set the alignment of the logo title.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Title Position -->
 
@@ -372,7 +508,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align:middle;">
 									<input name='logo_showcase_columns_title_font_size' class='logo-showcase-column-title-font-color' id="logo_showcase_columns_title_font_size" type='number' value='<?php if($logo_showcase_columns_title_font_size!='') echo sanitize_text_field( $logo_showcase_columns_title_font_size ); else echo '17'; ?>' />
 									<br/>
-									<span class="logo_manager_hint"><?php echo __( 'Set Title Font Size.', 'logoshowcase' ); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set the font size for the logo title.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Title Font Size -->
 
@@ -385,7 +521,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="title_italic" name="logo_showcase_free_title_font_style" value="italic" <?php if ( $logo_showcase_free_title_font_style == 'italic' ) echo 'checked'; ?>/>
 										<label for="title_italic"><?php _e( 'Italic', 'logoshowcase' ); ?></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __('Set Title Text Style.', 'logoshowcase'); ?></span>
+									<span class="logo_manager_hint"><?php echo __('Choose the font style for the logo title.', 'logoshowcase'); ?></span>
 								</td>
 							</tr><!-- End Title Font Style -->
 
@@ -394,7 +530,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align:middle;">
 									<input type="text" id="logo-showcase-column-title-font-color" name="logo_showcase_columns_title_font_color" value="<?php if ( $logo_showcase_columns_title_font_color !='' ) {echo $logo_showcase_columns_title_font_color; }else{echo "#282828"; } ?>" class="timezone_string">
 									<br/>
-									<span class="logo_manager_hint">Set Title Font Color.<span class="only_pro_v">(Only Pro)</span></span>
+									<span class="logo_manager_hint"><?php echo __('Choose the font color for the logo title.', 'logoshowcase'); ?></span>
 								</td>
 							</tr><!-- End Title Font Color -->
 
@@ -422,7 +558,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="desc_right" name="logo_showcase_columns_desc_position" value="right" <?php if ( $logo_showcase_columns_desc_position == 'right' ) echo 'checked'; ?>/>
 										<label for="desc_right"><?php _e( 'Right', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Set Description alignment.','logoshowcase' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade To Pro!</a></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set Logo Description Alignment.','logoshowcase' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank"><?php echo __( 'Upgrade To Pro!', 'logoshowcase' ); ?></a></span>
 								</td>
 							</tr><!-- End Description Content Position -->
 
@@ -431,7 +567,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align:middle;">
 									<input name='logo_showcase_columns_desc_font_size' class='logo-showcase-column-title-font-color' id="logo_showcase_columns_desc_font_size" type='number' value='<?php if($logo_showcase_columns_desc_font_size!='') echo sanitize_text_field( $logo_showcase_columns_desc_font_size ); else echo '17'; ?>' />
 									<br/>
-									<span class="logo_manager_hint">Set Description Font Size.<span class="only_pro_v">(Only Pro)</span></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set logo description font size.', 'logoshowcase' ); ?><span class="only_pro_v">(Only Pro)</span></span>
 								</td>
 							</tr><!-- End Description Title Font Size -->
 
@@ -444,7 +580,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="desc_italic" name="logo_showcase_free_desc_font_style" value="italic" <?php if ( $logo_showcase_free_desc_font_style == 'italic' ) echo 'checked'; ?>/>
 										<label for="desc_italic"><?php _e( 'Italic', 'logoshowcase' ); ?></label>
 									</div>
-									<span class="logo_manager_hint">Set Description font style.<span class="only_pro_v">(Only Pro)</span></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set logo description font style.', 'logoshowcase' ); ?><span class="only_pro_v">(Only Pro)</span></span>
 								</td>
 							</tr><!-- End Description Font Style -->
 
@@ -453,7 +589,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align:middle;">
 									<input type="text" id="logo_showcase_columns_desc_font_color" name="logo_showcase_columns_desc_font_color" value="<?php if ( $logo_showcase_columns_desc_font_color !='' ) {echo $logo_showcase_columns_desc_font_color; }else{echo "#282828"; } ?>" class="timezone_string">
 									<br/>
-									<span class="logo_manager_hint">Set Description Font Color.<span class="only_pro_v">(Only Pro)</span></span>
+									<span class="logo_manager_hint"><?php echo __('Set logo description font Color.', 'logoshowcase' ); ?><span class="only_pro_v">(Only Pro)</span></span>
 								</td>
 							</tr><!-- End Description Font Color -->
 
@@ -466,7 +602,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<option disabled value="3" <?php if ( $logo_showcase_columns_image_effect == '3' ) echo "selected"; ?> >Blur (Pro)</option>
 										<option disabled value="4" <?php if ( $logo_showcase_columns_image_effect == '4' ) echo "selected"; ?> >Blur & Grayscale (Pro)</option>
 									</select><br/>
-									<span class="logo_manager_hint"><?php echo __('Set Logo/Image Effects.', 'logoshowcase'); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set Logo/Image Effects.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Logo/Image Effects -->
 
@@ -479,7 +615,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<option disabled value="3" <?php if ( $logo_showcase_columns_image_effect_hover == '3' ) echo "selected"; ?> >Blur (Pro)</option>
 										<option disabled value="4" <?php if ( $logo_showcase_columns_image_effect_hover == '4' ) echo "selected"; ?> >Blur & Grayscale (Pro)</option>
 									</select><br/>
-									<span class="logo_manager_hint"><?php echo __('Set Logo/Image Effects.', 'logoshowcase'); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set Hover Logo/Image Effects.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Logo/Image Hover Effects -->
 
@@ -518,7 +654,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<option disabled value="right" <?php if ( $logo_showcase_tooltips_positions == 'right' ) echo "selected"; ?> >Right (Pro)</option>
 										<option disabled value="bottom" <?php if ( $logo_showcase_tooltips_positions == 'bottom' ) echo "selected"; ?> >Bottom (Pro)</option>
 									</select><br/>
-									<span class="logo_manager_hint"><?php echo __('Set Tooltip Position.', 'logoshowcase'); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Select the position of the tooltip.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Tooltip Position -->
 
@@ -527,7 +663,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align:middle;">
 									<input type="text" id="logo_showcase_tooltips_color" name="logo_showcase_tooltips_color" value="<?php if ( $logo_showcase_tooltips_color !='' ) {echo $logo_showcase_tooltips_color; }else{echo "#fff"; } ?>" class="timezone_string">
 									<br/>
-									<span class="logo_manager_hint"><?php echo __('Set Tooltip Text Color.', 'logoshowcase'); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Choose the text color for the tooltip.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Tooltip Text Color -->
 
@@ -536,9 +672,20 @@ function logo_showcase_wordpress_inner_custom_box() {
 								<td style="vertical-align:middle;">
 									<input type="text" id="logo_showcase_tooltips_bgcolor" name="logo_showcase_tooltips_bgcolor" value="<?php if ( $logo_showcase_tooltips_bgcolor !='' ) {echo $logo_showcase_tooltips_bgcolor; }else{echo "#282828"; } ?>" class="timezone_string">
 									<br/>
-									<span class="logo_manager_hint"><?php echo __('Set Tooltip Background Color.', 'logoshowcase'); ?></span>
+									<span class="logo_manager_hint"><?php echo __( 'Choose the background color for the tooltip.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr><!-- End Tooltip Background Color -->
+
+							<tr valign="top">
+								<th scope="row"><label for="logo_showcase_free_open_link"><?php echo __( 'Open Logo Link', 'logoshowcase' ); ?></label></th>
+								<td style="vertical-align:middle;">
+									<select class="timezone_string" name="logo_showcase_free_open_link">
+										<option value="_self" <?php if ( $logo_showcase_free_open_link == '_self' ) echo "selected"; ?> >Same Page</option>
+										<option value="_blank" <?php if ( $logo_showcase_free_open_link == '_blank' ) echo "selected"; ?> >New Page</option>
+									</select><br/>
+									<span class="logo_manager_hint"><?php echo __( 'Choose whether the logo link opens in the same page or a new tab.', 'logoshowcase' ); ?></span>
+								</td>
+							</tr>
 
 						</table>
 					</div>
@@ -606,6 +753,22 @@ function logo_showcase_wordpress_inner_custom_box() {
 									<span class="logo_manager_hint"><?php echo __( 'Select an option for autoplay time out.', 'logoshowcase' ); ?></span>
 								</td>
 							</tr> <!-- End Autoplay Time Out -->
+
+							<tr valign="top">
+								<th scope="row">
+									<label for="slide_center_mode"><?php echo __( 'Center Mode', 'logoshowcase' ); ?></label>
+								</th>
+								<td style="vertical-align: middle;">
+									<div class="switch-field">
+										<input type="radio" id="center_mode_true" name="slide_center_mode" value="true" <?php if ( $slide_center_mode === 'true' ) echo 'checked'; ?> />
+										<label for="center_mode_true"><?php _e( 'Yes', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
+
+										<input type="radio" id="center_mode_false" name="slide_center_mode" value="false" <?php if ( $slide_center_mode === 'false' || $slide_center_mode === '' ) echo 'checked'; ?> />
+										<label for="center_mode_false" class="center_mode_false"><?php _e( 'No', 'logoshowcase' ); ?></label>
+									</div>
+									<span class="logo_manager_hint"><?php echo __( 'Enable or disable slider center mode.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank"><?php echo __( 'Upgrade To Pro!', 'logoshowcase' ); ?></a></span>
+								</td>
+							</tr>
 
 							<tr valign="top">
 							    <th scope="row">
@@ -736,7 +899,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" disabled id="navigation_style_center" name="logo_showcase_navigation_style" value="50" <?php if ( $logo_showcase_navigation_style == '50' || $logo_showcase_navigation_style == '' ) echo 'checked'; ?>/>
 										<label for="navigation_style_center"><?php _e( 'Round', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Set style for navigation arrows.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade To Pro!</a></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set style for navigation arrows.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank"><?php echo __( 'Upgrade To Pro!', 'logoshowcase' ); ?></a></span>
 								</td>
 							</tr> <!-- End Navigation Style -->
 
@@ -816,7 +979,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 										<input type="radio" id="pagination_align_right" name="logo_showcase_pagination_position" value="right" <?php if ( $logo_showcase_pagination_position == 'right' ) echo 'checked'; ?>/>
 										<label for="pagination_align_right"><?php _e( 'Right', 'logoshowcase' ); ?><span class="mark"><?php _e( 'Pro', 'logoshowcase' ); ?></span></label>
 									</div>
-									<span class="logo_manager_hint"><?php echo __( 'Set the alignment of pagination dots.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank">Upgrade To Pro!</a></span>
+									<span class="logo_manager_hint"><?php echo __( 'Set the alignment of pagination dots.' ); ?> To unlock all, <a href="https://themepoints.com/logoshowcase/" target="_blank"><?php echo __( 'Upgrade To Pro!', 'logoshowcase' ); ?></a></span>
 								</td>
 							</tr><!-- End Pagination Position -->
 
@@ -911,6 +1074,11 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 	    update_post_meta( $post_id, 'logo_showcase_item_padding', $logo_showcase_item_padding );
 	}
 
+ 	#Checks for input and sanitizes/saves if needed    
+    if ( isset( $_POST['logo_showcase_columns_radius'] ) && ( $_POST['logo_showcase_columns_radius'] != '' ) ) {
+        update_post_meta( $post_id, 'logo_showcase_columns_radius', esc_html( $_POST['logo_showcase_columns_radius'] ) );
+    }
+
     // Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST[ 'grid_column_pleft' ] ) ) {
 	    $grid_column_pleft = intval( $_POST['grid_column_pleft'] );
@@ -965,11 +1133,31 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 		update_post_meta( $post_id, 'logo_showcase_tooltips_bgcolor', $logo_showcase_tooltips_bgcolor );
 	}
 
+ 	#Checks for input and sanitizes/saves if needed    
+    if ( isset( $_POST['logo_showcase_free_open_link'] ) && ( $_POST['logo_showcase_free_open_link'] != '' ) ) {
+        update_post_meta( $post_id, 'logo_showcase_free_open_link', esc_html( $_POST['logo_showcase_free_open_link'] ) );
+    }
+
 	// Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST[ 'logo_showcase_items_background_color' ] ) ) {
 		$logo_showcase_items_background_color = sanitize_hex_color( $_POST['logo_showcase_items_background_color'] );
 		update_post_meta( $post_id, 'logo_showcase_items_background_color', $logo_showcase_items_background_color );
 	}
+
+ 	#Checks for input and sanitizes/saves if needed    
+    if ( isset( $_POST['logo_showcase_table_header_bg'] ) && ( $_POST['logo_showcase_table_header_bg'] != '' ) ) {
+        update_post_meta( $post_id, 'logo_showcase_table_header_bg', esc_html( $_POST['logo_showcase_table_header_bg'] ) );
+    }
+
+ 	#Checks for input and sanitizes/saves if needed    
+    if ( isset( $_POST['logo_showcase_table_header_text'] ) && ( $_POST['logo_showcase_table_header_text'] != '' ) ) {
+        update_post_meta( $post_id, 'logo_showcase_table_header_text', esc_html( $_POST['logo_showcase_table_header_text'] ) );
+    }
+
+ 	#Checks for input and sanitizes/saves if needed    
+    if ( isset( $_POST['logo_showcase_header_font_size'] ) && ( $_POST['logo_showcase_header_font_size'] != '' ) ) {
+        update_post_meta( $post_id, 'logo_showcase_header_font_size', esc_html( $_POST['logo_showcase_header_font_size'] ) );
+    }
 
 	// Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST[ 'logo_showcase_items_hover_background' ] ) ) {
@@ -1035,6 +1223,35 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 	if ( isset( $_POST[ 'columnmobile' ] ) ) {
 		$columnmobile = sanitize_text_field( $_POST['columnmobile'] );
 		update_post_meta( $post_id, 'columnmobile', $columnmobile );
+	}
+
+ 	#Checks for input and sanitizes/saves if needed    
+    if ( isset( $_POST['grid_normal_lists'] ) && ( $_POST['grid_normal_lists'] != '' ) ) {
+        update_post_meta( $post_id, 'grid_normal_lists', esc_html( $_POST['grid_normal_lists'] ) );
+    }
+
+	// Sanitize and save 'list_normal_column' field
+	if ( isset( $_POST[ 'list_normal_column' ] ) ) {
+		$list_normal_column = sanitize_text_field( $_POST['list_normal_column'] );
+		update_post_meta( $post_id, 'list_normal_column', $list_normal_column );
+	}
+
+	// Sanitize and save 'list_columndesktop' field
+	if ( isset( $_POST[ 'list_columndesktop' ] ) ) {
+		$list_columndesktop = sanitize_text_field( $_POST['list_columndesktop'] );
+		update_post_meta( $post_id, 'list_columndesktop', $list_columndesktop );
+	}
+
+	// Sanitize and save 'list_columndesktopsmall' field
+	if ( isset( $_POST[ 'list_columndesktopsmall' ] ) ) {
+		$list_columndesktopsmall = sanitize_text_field( $_POST['list_columndesktopsmall'] );
+		update_post_meta( $post_id, 'list_columndesktopsmall', $list_columndesktopsmall );
+	}
+
+	// Sanitize and save 'list_columnmobile' field
+	if ( isset( $_POST[ 'list_columnmobile' ] ) ) {
+		$list_columnmobile = sanitize_text_field( $_POST['list_columnmobile'] );
+		update_post_meta( $post_id, 'list_columnmobile', $list_columnmobile );
 	}
 
 	// Checks for input and sanitizes/saves if needed
@@ -1132,6 +1349,16 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 	    $autoplaytimeout = sanitize_text_field( $_POST['autoplaytimeout'] );
 	    update_post_meta( $post_id, 'autoplaytimeout', $autoplaytimeout );
 	}
+
+ 	#Checks for input and sanitizes/saves if needed    
+    if ( isset( $_POST['slide_center_mode'] ) && ( $_POST['slide_center_mode'] != '' ) ) {
+        update_post_meta( $post_id, 'slide_center_mode', esc_html( $_POST['slide_center_mode'] ) );
+    }
+
+ 	#Checks for input and sanitizes/saves if needed    
+    if ( isset( $_POST['logo_showcase_free_direction'] ) && ( $_POST['logo_showcase_free_direction'] != '' ) ) {
+        update_post_meta( $post_id, 'logo_showcase_free_direction', esc_html( $_POST['logo_showcase_free_direction'] ) );
+    }
 
 	// Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST['logo_showcase_pagination'] ) && !empty( $_POST['logo_showcase_pagination'] ) ) {

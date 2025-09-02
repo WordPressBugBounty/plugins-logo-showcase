@@ -15,18 +15,44 @@ jQuery( document ).ready( function( $ ) {
 			$( "#grid_col_controller2" ).hide( 'slow' );
 			$( "#grid_col_controller3" ).hide( 'slow' );
 			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 		if( getImghIVal  == 'theme2' ) {
 			$( "#grid_col_controller" ).show( 'slow' );
 			$( "#grid_col_controller2" ).show( 'slow' );
 			$( "#grid_col_controller3" ).show( 'slow' );
 			$( "#grid_col_controller4" ).show( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 		if( getImghIVal  == 'theme3' ) {
 			$( "#grid_col_controller" ).hide( 'slow' );
 			$( "#grid_col_controller2" ).hide( 'slow' );
 			$( "#grid_col_controller3" ).hide( 'slow' );
 			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme4' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 	});
 
@@ -37,18 +63,44 @@ jQuery( document ).ready( function( $ ) {
 			$( "#grid_col_controller2" ).hide( 'slow' );
 			$( "#grid_col_controller3" ).hide( 'slow' );
 			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 		if( getImghIVal  == 'theme2' ) {
 			$( "#grid_col_controller" ).show( 'slow' );
 			$( "#grid_col_controller2" ).show( 'slow' );
 			$( "#grid_col_controller3" ).show( 'slow' );
 			$( "#grid_col_controller4" ).show( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 		if( getImghIVal  == 'theme3' ) {
 			$( "#grid_col_controller" ).hide( 'slow' );
 			$( "#grid_col_controller2" ).hide( 'slow' );
 			$( "#grid_col_controller3" ).hide( 'slow' );
 			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme4' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 	});
 
@@ -59,18 +111,151 @@ jQuery( document ).ready( function( $ ) {
 			$( "#grid_col_controller2" ).hide( 'slow' );
 			$( "#grid_col_controller3" ).hide( 'slow' );
 			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 		if( getImghIVal  == 'theme2' ) {
 			$( "#grid_col_controller" ).show( 'slow' );
 			$( "#grid_col_controller2" ).show( 'slow' );
 			$( "#grid_col_controller3" ).show( 'slow' );
 			$( "#grid_col_controller4" ).show( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 		if( getImghIVal  == 'theme3' ) {
 			$( "#grid_col_controller" ).hide( 'slow' );
 			$( "#grid_col_controller2" ).hide( 'slow' );
 			$( "#grid_col_controller3" ).hide( 'slow' );
 			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).show( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).show( 'slow' );
+		}
+		if( getImghIVal  == 'theme4' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+	});
+
+	$( "#radio-six" ).on( 'change', function() {
+		var getImghIVal = $( this ).val();
+		if( getImghIVal  == 'theme1' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme2' ) {
+			$( "#grid_col_controller" ).show( 'slow' );
+			$( "#grid_col_controller2" ).show( 'slow' );
+			$( "#grid_col_controller3" ).show( 'slow' );
+			$( "#grid_col_controller4" ).show( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme3' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme4' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+	});
+
+	$( "#radio-seven" ).on( 'change', function() {
+		var getImghIVal = $( this ).val();
+		if( getImghIVal  == 'theme1' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme2' ) {
+			$( "#grid_col_controller" ).show( 'slow' );
+			$( "#grid_col_controller2" ).show( 'slow' );
+			$( "#grid_col_controller3" ).show( 'slow' );
+			$( "#grid_col_controller4" ).show( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme3' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme4' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).hide( 'slow' );
+			$( "#grid_col_controller7" ).hide( 'slow' );
+			$( "#grid_col_controller8" ).hide( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
+		}
+		if( getImghIVal  == 'theme5' ) {
+			$( "#grid_col_controller" ).hide( 'slow' );
+			$( "#grid_col_controller2" ).hide( 'slow' );
+			$( "#grid_col_controller3" ).hide( 'slow' );
+			$( "#grid_col_controller4" ).hide( 'slow' );
+			$( "#grid_col_controller5" ).hide( 'slow' );
+			$( "#grid_col_controller6" ).show( 'slow' );
+			$( "#grid_col_controller7" ).show( 'slow' );
+			$( "#grid_col_controller8" ).show( 'slow' );
+			$( "#grid_col_controller9" ).hide( 'slow' );
 		}
 	});
 

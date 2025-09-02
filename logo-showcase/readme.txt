@@ -4,7 +4,7 @@ Donate link: https://themepoints.com/logoshowcase
 Tags:  logo, logo showcase, logo slider, logo carousel, slider, responsive carousel, showcase logo, image carousel, logo showcase, logo slide, logo slide show, logo slideshow, sponsors, carousel
 Requires at least: 4.0
 Tested up to: 6.8.2
-Stable tag: 3.0.8
+Stable tag: 3.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,13 +14,14 @@ Logo Showcase plugin allows you to display a list of clients, supporters, partne
 
 Logo Showcase is a lightweight & Responsive plugin to Display a list of clients, supporters, partners, or sponsors logos on your WordPress website. You can easily create a slider of images with external or internal links with titles & descriptions. You can manage your logos by grouping & Display them in a different places. no need to require any coding skills.
 
-https://youtu.be/lvX5GOl1LvI?list=PLMsHgGK2r5CEA3e3uJNP0VEGpustxjkbx
-
 <ul>
-	<li><a href="https://themepoints.com/logoshowcase">Premium Version</a></li>
-	<li><a href="https://themepoints.com/logoshowcase">Live Demo</a></li>
+	<li><a href="https://themepoints.com/logoshowcase">Upgrade to Pro</a></li>
+	<li><a href="https://themepoints.com/logoshowcase">Live Preview</a></li>
 	<li><a href="https://themepoints.com/questions-answer/">Quick Support</a></li>
 </ul>
+
+https://youtu.be/lvX5GOl1LvI?list=PLMsHgGK2r5CEA3e3uJNP0VEGpustxjkbx
+
 
 <strong> Logo Showcase 2.0.0 </strong>
 We Completly Update the plugin admin UI and update the plugin version. If you face any problems or find any bugs, please post it in the [support](https://www.themepoints.com/questions-answer/) forum or contact us directly via our [website](https://www.themepoints.com) and we try to respond within a short time.
@@ -31,6 +32,7 @@ We Completly Update the plugin admin UI and update the plugin version. If you fa
 * Grid
 * List
 * Ticker Mode
+* Table
 
 <strong> Available fields </strong>
 
@@ -53,6 +55,7 @@ We Completly Update the plugin admin UI and update the plugin version. If you fa
 	- Grid Style
 	- List Style
 	- Ticker Mode
+	- Table Style
 * Item Background Color
 * Item Hover Background Color
 * Item Border Width
@@ -190,6 +193,13 @@ First create a logo showcase list then copy shortcode into shortcode <code>Ex: [
 
 
 == Changelog ==
+
+= 3.0.9 =
+* Added New Styles.
+* Added New Options.
+* Check: Latest Version Compatibility.
+* Improved: Admin dashboard UI.
+* Update: Update Options Page.
 
 = 3.0.8 =
 * Check: Latest Version Compatibility.
