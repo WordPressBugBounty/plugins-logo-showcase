@@ -91,9 +91,9 @@
 		height: 30px;
 		line-height: 30px;
 		text-align:center;
-		background: <?php echo $logo_showcase_navigation_bg_color ?> none repeat scroll 0 0;
-		color: <?php echo $logo_showcase_navigation_text_color ?>;
-		border: 1px solid <?php echo $logo_showcase_navigation_bg_color ?>;
+		background: <?php echo esc_attr( $logo_showcase_navigation_bg_color ); ?> none repeat scroll 0 0;
+		color: <?php echo esc_attr( $logo_showcase_navigation_text_color ); ?>;
+		border: 1px solid <?php echo esc_attr( $logo_showcase_navigation_bg_color ); ?>;
 		border-radius: 0%;
 	}
 	#logo-showcase-wrap-<?php echo esc_attr( $postid ); ?> .owl-nav .owl-next{
@@ -129,9 +129,9 @@
 	#logo-showcase-wrap-<?php echo esc_attr( $postid ); ?> .owl-nav .owl-prev{}
 	#logo-showcase-wrap-<?php echo esc_attr( $postid ); ?> .owl-nav .owl-next:hover,
 	#logo-showcase-wrap-<?php echo esc_attr( $postid ); ?> .owl-nav .owl-prev:hover {
-		color: <?php echo $logo_showcase_navigation_hover_text_color ?>;
-		background: <?php echo $logo_showcase_navigation_hover_bg_color ?> none repeat scroll 0 0;
-		border: 1px solid <?php echo $logo_showcase_navigation_hover_bg_color ?>;
+		color: <?php echo esc_attr( $logo_showcase_navigation_hover_text_color ); ?>;
+		background: <?php echo esc_attr( $logo_showcase_navigation_hover_bg_color ); ?> none repeat scroll 0 0;
+		border: 1px solid <?php echo esc_attr( $logo_showcase_navigation_hover_bg_color ); ?>;
 	}
 	<?php } if ( $logo_showcase_pagination == 'true' ) { ?>
 	#logo-showcase-wrap-<?php echo esc_attr( $postid ); ?> .owl-dots {
@@ -149,7 +149,7 @@
 			height: 10px;
 			display: inline-block;
 			position: relative;
-			background: <?php echo $logo_showcase_pagination_bg_color ?>;
+			background: <?php echo esc_attr( $logo_showcase_pagination_bg_color ); ?>;
 			margin: 0px 4px;
 			border-radius: 50%;
 		}
@@ -159,7 +159,7 @@
 			height: 10px;
 			display: inline-block;
 			position: relative;
-			background: <?php echo $logo_showcase_pagination_bg_color ?>;
+			background: <?php echo esc_attr( $logo_showcase_pagination_bg_color ); ?>;
 			margin: 0px 4px;
 			border-radius: 0%;
 		}
@@ -169,13 +169,13 @@
 			height: 6px;
 			display: inline-block;
 			position: relative;
-			background: <?php echo $logo_showcase_pagination_bg_color ?>;
+			background: <?php echo esc_attr( $logo_showcase_pagination_bg_color ); ?>;
 			margin: 0px 4px;
 			border-radius: 50px;
 		}
 	<?php } ?>
 	#logo-showcase-wrap-<?php echo esc_attr( $postid ); ?> .owl-dots .owl-dot.active {
-		background: <?php echo $logo_showcase_pagination_active_bg_color ?>;
+		background: <?php echo esc_attr( $logo_showcase_pagination_active_bg_color ); ?>;
 	}
 	<?php } ?>
 </style>

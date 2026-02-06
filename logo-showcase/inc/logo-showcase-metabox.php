@@ -1074,10 +1074,11 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 	    update_post_meta( $post_id, 'logo_showcase_item_padding', $logo_showcase_item_padding );
 	}
 
- 	#Checks for input and sanitizes/saves if needed    
-    if ( isset( $_POST['logo_showcase_columns_radius'] ) && ( $_POST['logo_showcase_columns_radius'] != '' ) ) {
-        update_post_meta( $post_id, 'logo_showcase_columns_radius', esc_html( $_POST['logo_showcase_columns_radius'] ) );
-    }
+ 	#Checks for input and sanitizes/saves if needed
+	if ( isset( $_POST['logo_showcase_columns_radius'] ) ) {
+	    $logo_showcase_columns_radius = absint( $_POST['logo_showcase_columns_radius'] ); // ensures non-negative integer
+	    update_post_meta( $post_id, 'logo_showcase_columns_radius', $logo_showcase_columns_radius );
+	}
 
     // Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST[ 'grid_column_pleft' ] ) ) {
@@ -1133,10 +1134,11 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 		update_post_meta( $post_id, 'logo_showcase_tooltips_bgcolor', $logo_showcase_tooltips_bgcolor );
 	}
 
- 	#Checks for input and sanitizes/saves if needed    
-    if ( isset( $_POST['logo_showcase_free_open_link'] ) && ( $_POST['logo_showcase_free_open_link'] != '' ) ) {
-        update_post_meta( $post_id, 'logo_showcase_free_open_link', esc_html( $_POST['logo_showcase_free_open_link'] ) );
-    }
+ 	#Checks for input and sanitizes/saves if needed
+	if ( isset( $_POST[ 'logo_showcase_free_open_link' ] ) ) {
+		$logo_showcase_free_open_link = sanitize_text_field( $_POST['logo_showcase_free_open_link'] );
+		update_post_meta( $post_id, 'logo_showcase_free_open_link', $logo_showcase_free_open_link );
+	}
 
 	// Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST[ 'logo_showcase_items_background_color' ] ) ) {
@@ -1144,20 +1146,23 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 		update_post_meta( $post_id, 'logo_showcase_items_background_color', $logo_showcase_items_background_color );
 	}
 
- 	#Checks for input and sanitizes/saves if needed    
-    if ( isset( $_POST['logo_showcase_table_header_bg'] ) && ( $_POST['logo_showcase_table_header_bg'] != '' ) ) {
-        update_post_meta( $post_id, 'logo_showcase_table_header_bg', esc_html( $_POST['logo_showcase_table_header_bg'] ) );
-    }
+	// Checks for input and sanitizes/saves if needed
+	if ( isset( $_POST[ 'logo_showcase_table_header_bg' ] ) ) {
+		$logo_showcase_table_header_bg = sanitize_hex_color( $_POST['logo_showcase_table_header_bg'] );
+		update_post_meta( $post_id, 'logo_showcase_table_header_bg', $logo_showcase_table_header_bg );
+	}
 
- 	#Checks for input and sanitizes/saves if needed    
-    if ( isset( $_POST['logo_showcase_table_header_text'] ) && ( $_POST['logo_showcase_table_header_text'] != '' ) ) {
-        update_post_meta( $post_id, 'logo_showcase_table_header_text', esc_html( $_POST['logo_showcase_table_header_text'] ) );
-    }
+	// Checks for input and sanitizes/saves if needed
+	if ( isset( $_POST[ 'logo_showcase_table_header_text' ] ) ) {
+		$logo_showcase_table_header_text = sanitize_hex_color( $_POST['logo_showcase_table_header_text'] );
+		update_post_meta( $post_id, 'logo_showcase_table_header_text', $logo_showcase_table_header_text );
+	}
 
- 	#Checks for input and sanitizes/saves if needed    
-    if ( isset( $_POST['logo_showcase_header_font_size'] ) && ( $_POST['logo_showcase_header_font_size'] != '' ) ) {
-        update_post_meta( $post_id, 'logo_showcase_header_font_size', esc_html( $_POST['logo_showcase_header_font_size'] ) );
-    }
+	// Checks for input and sanitizes/saves if needed
+	if ( isset( $_POST[ 'logo_showcase_header_font_size' ] ) ) {
+		$logo_showcase_header_font_size = sanitize_text_field( $_POST['logo_showcase_header_font_size'] );
+		update_post_meta( $post_id, 'logo_showcase_header_font_size', $logo_showcase_header_font_size );
+	}
 
 	// Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST[ 'logo_showcase_items_hover_background' ] ) ) {
@@ -1225,10 +1230,11 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 		update_post_meta( $post_id, 'columnmobile', $columnmobile );
 	}
 
- 	#Checks for input and sanitizes/saves if needed    
-    if ( isset( $_POST['grid_normal_lists'] ) && ( $_POST['grid_normal_lists'] != '' ) ) {
-        update_post_meta( $post_id, 'grid_normal_lists', esc_html( $_POST['grid_normal_lists'] ) );
-    }
+ 	#Checks for input and sanitizes/saves if needed
+	if ( isset( $_POST[ 'grid_normal_lists' ] ) ) {
+		$grid_normal_lists = sanitize_text_field( $_POST['grid_normal_lists'] );
+		update_post_meta( $post_id, 'grid_normal_lists', $grid_normal_lists );
+	}
 
 	// Sanitize and save 'list_normal_column' field
 	if ( isset( $_POST[ 'list_normal_column' ] ) ) {
@@ -1350,14 +1356,16 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 	    update_post_meta( $post_id, 'autoplaytimeout', $autoplaytimeout );
 	}
 
- 	#Checks for input and sanitizes/saves if needed    
-    if ( isset( $_POST['slide_center_mode'] ) && ( $_POST['slide_center_mode'] != '' ) ) {
-        update_post_meta( $post_id, 'slide_center_mode', esc_html( $_POST['slide_center_mode'] ) );
-    }
+	// Checks for input and sanitizes/saves if needed  
+	if ( isset( $_POST['slide_center_mode'] ) && !empty( $_POST['slide_center_mode'] ) ) {
+	    $slide_center_mode = sanitize_text_field( $_POST['slide_center_mode'] );
+	    update_post_meta( $post_id, 'slide_center_mode', $slide_center_mode );
+	}    
 
  	#Checks for input and sanitizes/saves if needed    
-    if ( isset( $_POST['logo_showcase_free_direction'] ) && ( $_POST['logo_showcase_free_direction'] != '' ) ) {
-        update_post_meta( $post_id, 'logo_showcase_free_direction', esc_html( $_POST['logo_showcase_free_direction'] ) );
+    if (isset($_POST['logo_showcase_free_direction'])) {
+        $logo_showcase_free_direction = sanitize_text_field($_POST['logo_showcase_free_direction']);
+        update_post_meta($post_id, 'logo_showcase_free_direction', $logo_showcase_free_direction);
     }
 
 	// Checks for input and sanitizes/saves if needed
@@ -1442,7 +1450,6 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 }
 add_action( 'save_post', 'logo_showcase_wordpress_save_postdata' );
 
-
 function tlsw_logoshowcase_notice_message() {
     // Show only to Admins
     if ( ! current_user_can( 'manage_options' ) ) {
@@ -1472,7 +1479,6 @@ function tlsw_logoshowcase_notice_message() {
     if ( time() - $activation_time < 604800 ) {
         return;
     }
-
     ?>
 
     <div id="tlsw-logoshowcase-review-notice" class="tlsw-logoshowcase-review-notice">
