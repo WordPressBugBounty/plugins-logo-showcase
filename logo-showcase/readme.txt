@@ -1,24 +1,30 @@
-=== Logo Showcase – Responsive Logo Carousel, Grid, List & Ticker for WordPress ===
+=== Logo Showcase – Logo Slider, Carousel & Sponsors Gallery ===
 Contributors: themepoints
 Donate link: https://themepoints.com/logoshowcase
-Tags:  logo, logo showcase, logo slider, logo carousel, slider, responsive carousel, showcase logo, image carousel, logo showcase, logo slide, logo slide show, logo slideshow, sponsors, carousel
+Tags: logo showcase, logo slider, logo carousel, sponsors, clients, partners, brand logos, image carousel
 Requires at least: 4.0
 Tested up to: 6.9
 Stable tag: 4.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Logo Showcase plugin allows you to display a list of clients, supporters, partners, or sponsors logos on your WordPress website easily.
+Create beautiful logo showcases for clients, sponsors, partners, or brands using slider, grid, list, or ticker layouts — no coding required.
 
 == Description ==
 
-Logo Showcase is a lightweight & Responsive plugin to Display a list of clients, supporters, partners, or sponsors logos on your WordPress website. You can easily create a slider of images with external or internal links with titles & descriptions. You can manage your logos by grouping & Display them in a different places. no need to require any coding skills.
+Logo Showcase lets you display client, sponsor, partner, or brand logos in a clean, professional, and highly customizable way—without writing a single line of code.
 
-<ul>
-	<li><a href="https://themepoints.com/logoshowcase">Upgrade to Pro</a></li>
-	<li><a href="https://themepoints.com/logoshowcase">Live Preview</a></li>
-	<li><a href="https://themepoints.com/questions-answer/">Quick Support</a></li>
-</ul>
+Create responsive logo sliders, grids, lists, tickers, or tables in minutes using an intuitive shortcode generator. Each logo supports images, titles, descriptions, tooltips, and custom links, giving you full control over how your brand partners are presented.
+
+Built for performance and mobile-first design, Logo Showcase works seamlessly with any WordPress theme and looks great on all screen sizes. Whether you’re showcasing clients, sponsors, or trusted brands, this plugin helps you build credibility and visual trust instantly.
+
+
+**Helpful Links**
+- [Upgrade to Pro](https://themepoints.com/logoshowcase)
+- [Live Preview](https://themepoints.com/logoshowcase)
+- [Documentation](https://themepoints.com/logoshowcase/docs/logo-showcase/overview/)
+
+**Video Tutorial**
 
 https://youtu.be/lvX5GOl1LvI?list=PLMsHgGK2r5CEA3e3uJNP0VEGpustxjkbx
 
@@ -26,20 +32,21 @@ https://youtu.be/lvX5GOl1LvI?list=PLMsHgGK2r5CEA3e3uJNP0VEGpustxjkbx
 <strong> Logo Showcase 2.0.0 </strong>
 We Completly Update the plugin admin UI and update the plugin version. If you face any problems or find any bugs, please post it in the [support](https://www.themepoints.com/questions-answer/) forum or contact us directly via our [website](https://www.themepoints.com) and we try to respond within a short time.
 
-<strong> Available Layout </strong>
+
+### 🔹 Layout Types
 
 * Slider
 * Grid
 * List
-* Ticker Mode
+* Ticker
 * Table
 
-<strong> Available fields </strong>
+### 🔹 Logo Fields
 
-* Logo Title Option.
-* Logo Link Option.
-* Logo Description Option.
-* logo Uploader Option.
+* Logo image upload
+* Logo title
+* Logo description
+* Logo link (external or internal)
 
 <h3> KEY FEATURES </h3>
 
@@ -189,6 +196,17 @@ First create a logo showcase list then copy shortcode into shortcode <code>Ex: [
 
 == Frequently Asked Questions ==
 
+= Does this plugin work with any theme? =
+Yes, Logo Showcase works with all standard WordPress themes.
+
+= Is the plugin responsive? =
+Yes, all layouts are fully responsive and mobile-friendly.
+
+= Can I show multiple logo showcases on one page? =
+Yes, unlimited shortcodes are supported.
+
+= Is coding required? =
+No. Everything is managed via the admin panel.
 
 
 
