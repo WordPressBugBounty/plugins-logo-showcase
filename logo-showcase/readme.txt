@@ -3,8 +3,8 @@ Contributors: themepoints
 Donate link: https://themepoints.com/logoshowcase
 Tags: logo showcase, logo slider, logo carousel, sponsors, clients, partners, brand logos, image carousel
 Requires at least: 4.0
-Tested up to: 6.9
-Stable tag: 4.0.1
+Tested up to: 7.0
+Stable tag: 4.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -211,6 +211,11 @@ No. Everything is managed via the admin panel.
 
 
 == Changelog ==
+
+= 4.0.2 =
+* Check: Latest Version Compatibility.
+* Improved: Admin dashboard UI.
+* Update: Update Options Page.
 
 = 4.0.1 =
 * Fix: Fix Vulnerability Issue.

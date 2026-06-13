@@ -18,8 +18,8 @@ function logo_showcase_wordpress_inner_custom_box() {
 	// Use nonce for verification
 	wp_nonce_field( plugin_basename( __FILE__ ), 'logo_showcase_wordpress_dynamicMeta_noncename' );
 
-	$repeatable_fields                         = get_post_meta( $post->ID, 'logo_showcase_columns', false );
 	//get the saved meta as an arry
+	$repeatable_fields                         = get_post_meta( $post->ID, 'logo_showcase_columns', false );
 	$logo_showcase_columns_post_themes         = get_post_meta( $post->ID, 'logo_showcase_columns_post_themes', true );
 	$logo_showcase_pagination                  = get_post_meta( $post->ID, 'logo_showcase_pagination', true );
 	$logo_showcase_pagination_position         = get_post_meta( $post->ID, 'logo_showcase_pagination_position', true );
@@ -1076,7 +1076,7 @@ function logo_showcase_wordpress_save_postdata( $post_id ) {
 
  	#Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST['logo_showcase_columns_radius'] ) ) {
-	    $logo_showcase_columns_radius = absint( $_POST['logo_showcase_columns_radius'] ); // ensures non-negative integer
+	    $logo_showcase_columns_radius = absint( $_POST['logo_showcase_columns_radius'] );
 	    update_post_meta( $post_id, 'logo_showcase_columns_radius', $logo_showcase_columns_radius );
 	}
 
@@ -1494,9 +1494,6 @@ function tlsw_logoshowcase_notice_message() {
     </div>
 
     <style type="text/css">
-        #tlsw-logoshowcase-review-notice .notice-dismiss{
-            padding: 0 0 0 26px;
-        }
         #tlsw-logoshowcase-review-notice .notice-dismiss:before{
             display: none;
         }
@@ -1523,23 +1520,28 @@ function tlsw_logoshowcase_notice_message() {
         #tlsw-logoshowcase-review-notice .testimonial-review-ul {
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 15px;
         }
         #tlsw-logoshowcase-review-notice .testimonial-review-ul li {
-            display: inline-block;
-            margin-right: 15px;
+            margin: 0px;
         }
         #tlsw-logoshowcase-review-notice .testimonial-review-ul li a {
             display: inline-block;
             color: #2271b1;
             text-decoration: none;
-            padding-left: 26px;
             position: relative;
+            width: auto !important;
+            top: unset !important;
+            right: unset !important;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
         }
-        #tlsw-logoshowcase-review-notice .testimonial-review-ul li a span {
-            position: absolute;
-            left: 0;
-            top: -2px;
-        }
+
     </style>
 
     <script>

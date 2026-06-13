@@ -12,6 +12,7 @@ function logo_showcase_wordpress_shortcode_register( $atts, $content = null ) {
 	);
 
 	global $post;
+	
 	$postid = $atts['id'];
 
 	$featuress                                 = get_post_meta( $postid, 'logo_showcase_columns');
