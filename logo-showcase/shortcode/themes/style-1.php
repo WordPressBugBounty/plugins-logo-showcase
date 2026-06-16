@@ -180,76 +180,75 @@
 	<?php } ?>
 </style>
 
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-	  	$("#logo-showcase-wrap-<?php echo esc_attr( $postid ); ?>").owlCarousel({
-			lazyLoad		  : true,
-			loop			  : <?php echo $loop ?>,
-			margin			  : <?php echo $margin ?>,
-			autoplay 		  : <?php echo $logo_showcase_columns_show_auto_play ?>,
-			autoplaySpeed	  : <?php echo $logo_showcase_columns_show_slide_speed ?>,
-			autoplayTimeout	  : <?php echo $autoplaytimeout ?>,
-			autoplayHoverPause: <?php echo $stop_hover_play ?>,
-			nav 			  : <?php echo $logo_showcase_navigation ?>,
-			dots			  : <?php echo $logo_showcase_pagination ?>,
-			navText           : ['<i class="fa fa-angle-right" aria-hidden="true"></i>', '<i class="fa fa-angle-left" aria-hidden="true"></i>'],
-			smartSpeed		  : 450,
-			clone			  :true,
-			responsive		  :{
-				0:{
-				  items:<?php echo $itemsmobile ?>,
-				},
-				678:{
-				  items:<?php echo $itemsdesktopsmall ?>,
-				},
-				980:{
-				  items:<?php echo $itemsdesktop ?>,
-				},
-				1199:{
-				  items:<?php echo $logo_showcase_columns_show_items ?>,
-				}
-			}
-	  	});
-	  	<?php if( $logo_showcase_columns_show_hide_tooltips ==1 ){ ?> 
-			$(".img-tipso-<?php echo esc_attr( $postid ); ?>").tipso({
-			  useTitle : false,
-			  width : 150,
-			  position : "<?php echo $logo_showcase_tooltips_positions;?>",
-			  color : "<?php echo $logo_showcase_tooltips_color;?>",
-			  background : "<?php echo $logo_showcase_tooltips_bgcolor;?>",
-			  delay : 200,
-			  speed : 400,
-			});
-	  	<?php } ?>
-	});
-</script>
-
 <div class="logo-showcase-main-section-<?php echo esc_attr( $postid ); ?>">
-	<div id="logo-showcase-wrap-<?php echo esc_attr( $postid ); ?>" class="owl-carousel">
+	<div class="logo-showcase-wrap owl-carousel"
+	    id="logo-showcase-wrap-<?php echo esc_attr($postid); ?>"
+	    data-loop="<?php echo esc_attr($loop); ?>"
+	    data-margin="<?php echo esc_attr($margin); ?>"
+	    data-autoplay="<?php echo esc_attr($logo_showcase_columns_show_auto_play); ?>"
+	    data-autoplay-speed="<?php echo esc_attr($logo_showcase_columns_show_slide_speed); ?>"
+	    data-autoplay-timeout="<?php echo esc_attr($autoplaytimeout); ?>"
+	    data-hover-pause="<?php echo esc_attr($stop_hover_play); ?>"
+	    data-nav="<?php echo esc_attr($logo_showcase_navigation); ?>"
+	    data-dots="<?php echo esc_attr($logo_showcase_pagination); ?>"
+	    data-items-mobile="<?php echo esc_attr($itemsmobile); ?>"
+	    data-items-tablet="<?php echo esc_attr($itemsdesktopsmall); ?>"
+	    data-items-desktop="<?php echo esc_attr($itemsdesktop); ?>"
+	    data-items-large="<?php echo esc_attr($logo_showcase_columns_show_items); ?>"
+		data-tooltip-enabled="<?php echo esc_attr($logo_showcase_columns_show_hide_tooltips); ?>"
+	    data-tipso-position="<?php echo esc_attr($logo_showcase_tooltips_positions); ?>"
+	    data-tipso-color="<?php echo esc_attr($logo_showcase_tooltips_color); ?>"
+	    data-tipso-bgcolor="<?php echo esc_attr($logo_showcase_tooltips_bgcolor); ?>"
+	    >
+
 		<?php
-		$i = 0;
-		foreach ( $featuress as $feature ) {
-			$logothumb = wp_get_attachment_image( $feature['logo_showcase_uploader'], 'thumb-full', false );
-			?>
-			<?php if( $logo_showcase_columns_show_hide_tooltips == 1 ){ ?>
-				<div class="lsw-logo-items <?php if( !empty( $feature['logo_showcase_title'] ) ){ ?> img-tipso-<?php echo esc_attr( $postid ); ?> tipso_style" data-tipso="<?php echo $feature['logo_showcase_title']; ?><?php } ?>">
-				<?php }else{ ?>
-					<div class="lsw-logo-items">
-				<?php } ?>
-				<div class="lsw-logo-items-thumb">
-					<?php if( empty( $feature['logo_showcase_link_url'] ) ){ ?> 
-						<?php echo $logothumb; ?>
-					<?php }else{ ?>
-						<a href="<?php echo $feature['logo_showcase_link_url']; ?>"> <?php echo $logothumb; ?></a>
-					<?php } ?>
-					<?php if( $logo_showcase_free_show_title_hide == 1 ){
-						if( !empty( $feature['logo_showcase_title'] ) ){ ?>
-							<div class="lsw-logo-items-title"> <?php echo $feature['logo_showcase_title']; ?> </div>
-						<?php } ?>
-					<?php } ?>
-				</div>
-			</div>
-		<?php $i++; if( $i == 8 ){ break; } ?>
-		<?php } ?>
+			$i = 0;
+
+			foreach ( $featuress as $feature ) {
+			    // 1. Get the image markup
+			    $logothumb = wp_get_attachment_image( $feature['logo_showcase_uploader'], 'thumb-full', false );
+			    
+			    // 2. Setup dynamic HTML attributes and classes for clean markup
+			    $item_classes = array( 'lsw-logo-items' );
+			    $data_attr    = '';
+			    
+			    if ( $logo_showcase_columns_show_hide_tooltips == 1 && ! empty( $feature['logo_showcase_title'] ) ) {
+			        $item_classes[] = 'js-tipso-trigger';
+			        $item_classes[] = 'tipso_style';
+			        $data_attr      = ' data-tipso="' . esc_attr( $feature['logo_showcase_title'] ) . '"';
+			    }
+			    
+			    // Convert class array to space-separated string
+			    $class_string = implode( ' ', $item_classes );
+			    ?>
+
+			    <div class="<?php echo esc_attr( $class_string ); ?>"<?php echo $data_attr; ?>>
+			        <div class="lsw-logo-items-thumb">
+			            
+			            <?php if ( empty( $feature['logo_showcase_link_url'] ) ) : ?> 
+			                <?php echo $logothumb; ?>
+			            <?php else : ?>
+			                <a href="<?php echo esc_url( $feature['logo_showcase_link_url'] ); ?>">
+			                    <?php echo $logothumb; ?>
+			                </a>
+			            <?php endif; ?>
+
+			            <?php if ( $logo_showcase_free_show_title_hide == 1 && ! empty( $feature['logo_showcase_title'] ) ) : ?>
+			                <div class="lsw-logo-items-title"> 
+			                    <?php echo esc_html( $feature['logo_showcase_title'] ); ?> 
+			                </div>
+			            <?php endif; ?>
+
+			        </div>
+			    </div>
+
+			    <?php 
+			    // 3. Break out of the loop after 8 iterations
+			    $i++; 
+			    if ( $i === 8 ) { 
+			        break; 
+			    } 
+			} 
+		?>
 	</div>
 </div>

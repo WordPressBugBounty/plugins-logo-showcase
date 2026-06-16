@@ -138,7 +138,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 											</div>
 										</div>
 										<div class="lsp_remove">
-											<a class="button remove-row" href="#"><?php echo __( 'Delete', 'logoshowcase' ); ?></span></a>
+											<a class="button remove-row" href="#"><span><?php echo __( 'Delete', 'logoshowcase' ); ?></span></a>
 										</div>
 									</div>
 								<?php
@@ -167,7 +167,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 									</div>
 								</div>
 								<div class="lsp_remove">
-									<a class="button remove-row" href="#"><?php echo __( 'Delete', 'logoshowcase' ); ?></span></a>
+									<a class="button remove-row" href="#"><span><?php echo __( 'Delete', 'logoshowcase' ); ?></span></a>
 								</div>
 							</div>
 							<?php endif; ?>
@@ -193,7 +193,7 @@ function logo_showcase_wordpress_inner_custom_box() {
 									</div>
 								</div>
 								<div class="lsp_remove">
-									<a class="button remove-row" href="#"><?php echo __( 'Delete', 'logoshowcase' ); ?></span></a>
+									<a class="button remove-row" href="#"><span><?php echo __( 'Delete', 'logoshowcase' ); ?></span></a>
 								</div>
 							</div>
 						</div>
