@@ -1,216 +1,216 @@
-=== Logo Showcase – Logo Slider, Carousel & Sponsors Gallery ===
-Contributors: themepoints
-Donate link: https://themepoints.com/logoshowcase
-Tags: logo showcase, logo slider, logo carousel, sponsors, clients, partners, brand logos, image carousel
-Requires at least: 4.0
-Tested up to: 7.0
-Stable tag: 4.0.4
+=== Logo Showcase – Logo Slider, Logo Carousel & Client Logos Grid ===
+Contributors: themepoints, freemius
+Donate link: https://themepoints.com/logoshowcase/
+Tags: logo slider, logo carousel, logo showcase, client logos, sponsors
+Requires at least: 6.3
+Tested up to: 7.1
+Requires PHP: 7.4
+Stable tag: 5.0.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Create beautiful logo showcases for clients, sponsors, partners, or brands using slider, grid, list, or ticker layouts — no coding required.
+Logo slider, carousel and grid for client, partner and sponsor logos. Unlimited logos, live preview, block, Elementor and shortcode. No jQuery.
 
 == Description ==
 
-Logo Showcase lets you display client, sponsor, partner, or brand logos in a clean, professional, and highly customizable way—without writing a single line of code.
+**Logo Showcase** is a fast, easy logo slider and logo grid plugin for WordPress. Show your clients, partners, sponsors, brands, press mentions and "as seen in" logos in a responsive carousel or grid, and build it all from a clean dashboard with a **live preview**. No code needed.
 
-Create responsive logo sliders, grids, lists, tickers, or tables in minutes using an intuitive shortcode generator. Each logo supports images, titles, descriptions, tooltips, and custom links, giving you full control over how your brand partners are presented.
+Version 5 is a full redesign: a new dashboard and editor, a lightweight slider written from scratch (**no jQuery and no slider library**), and **unlimited logos in the free version**.
 
-Built for performance and mobile-first design, Logo Showcase works seamlessly with any WordPress theme and looks great on all screen sizes. Whether you’re showcasing clients, sponsors, or trusted brands, this plugin helps you build credibility and visual trust instantly.
+[Live demos](https://themepoints.com/logoshowcase/) | [Documentation](https://themepoints.com/logoshowcase/documentation/)
 
+= Why choose Logo Showcase? =
 
-**Helpful Links**
-- [Upgrade to Pro](https://themepoints.com/logoshowcase)
-- [Live Preview](https://themepoints.com/logoshowcase)
-- [Documentation](https://themepoints.com/logoshowcase/docs/logo-showcase/overview/)
+* **Unlimited showcases and unlimited logos**, free.
+* **Fast.** The CSS and JavaScript files are small and load only on pages that show a logo showcase.
+* **No layout shift.** The space for the slider is reserved in CSS, so your page does not jump when the carousel starts.
+* **Build visually.** Change a setting and watch the live preview update. Check desktop, tablet and mobile before you save.
+* **Works with your editor.** Use the Gutenberg block, the Elementor widget or a shortcode.
+* **Accessible.** Keyboard friendly, a pause button for autoplay, tooltips on focus, and reduced-motion support.
+* **Right-to-left ready.** Set the text direction to automatic, RTL or LTR. Slide direction, arrows and alignment mirror for Arabic, Hebrew, Persian and Urdu sites.
 
-**Video Tutorial**
+= Free features =
 
-https://youtu.be/lvX5GOl1LvI?list=PLMsHgGK2r5CEA3e3uJNP0VEGpustxjkbx
+**Layouts**
 
+* Responsive **logo slider (carousel)**
+* Responsive **logo grid**
+* Set how many logos show on desktop, tablet and mobile
 
-<strong> Logo Showcase 2.0.0 </strong>
-We Completly Update the plugin admin UI and update the plugin version. If you face any problems or find any bugs, please post it in the [support](https://www.themepoints.com/questions-answer/) forum or contact us directly via our [website](https://www.themepoints.com) and we try to respond within a short time.
+**Logo slider options**
 
+* Autoplay with pause on hover and a pause button
+* Loop, drag with the mouse, swipe on touch screens
+* Arrows and dots, with an option to show the arrows only on hover
+* Slide speed, spacing, arrow and dot colors, arrow position and shape
 
-### 🔹 Layout Types
+**Logo management**
 
-* Slider
-* Grid
-* List
-* Ticker
-* Table
+* **Bulk upload:** choose many images or drag them onto the editor
+* Drag and drop to reorder, or order by name, or randomly
+* Title, link, alt text and a short description for each logo
+* Open links in a new tab, add rel="nofollow"
+* Limit the number of logos shown
 
-### 🔹 Logo Fields
+**Design**
 
-* Logo image upload
-* Logo title
-* Logo description
-* Logo link (external or internal)
+* Card background and hover colors
+* Border style (solid, dashed, dotted, double), width and color
+* Corner radius and padding
+* Logo titles and descriptions with size, color, alignment and style
+* Zoom-in hover animation
+* Tooltips on hover or keyboard focus
+* Custom CSS for each showcase
+* 3 starter templates: Trusted by, Sponsor wall and Partner strip
 
-<h3> KEY FEATURES </h3>
+**Developer and site-owner friendly**
 
-* Easy & Lightweight.
-* Clean Design & Code.
-* Fully responsive and mobile-ready.
-* Highly customized for User Experience.
-* Unique Shortcode Generator.
-* Multiple shortcodes on one page.
-* Touch & Swipe Enable.
-* Logo Showcase Style
-	- Slider Style
-	- Grid Style
-	- List Style
-	- Ticker Mode
-	- Table Style
-* Item Background Color
-* Item Hover Background Color
-* Item Border Width
-* Item Border Color
-* Item Hover Border Color
-* Item Padding
-* Logo Title Show/Hide
-* Title Position
-	- Position Left
-	- Position Center
-	- Position Rright
-* Title Font Size
-* Title Font Style
-	- Normal Style
-	- Italic Style
-* Title Font Color	
-* Description Show/Hide
-* Description Position
-	- Position Left
-	- Position Center
-	- Position Right
-* Description Font Size
-* Description Font Style
-	- Normal Style
-	- Italic Style
-* Description Font Color
-* Image Effects
-	- Normal Effect
-	- Grayscale Effect
-	- Blur Effect
-	- Blur & Grayscale Effect
-* Image Hover Effects
-	- Normal Effect
-	- Grayscale Effect
-	- Blur Effect
-	- Blur & Grayscale Effect
-* Image Animation
-	- Normal Animation
-	- ZoomIn Animation
-	- ZoomOut Animation
-	- SlideUp Animation
-* Tooltip Enable/Disable
-* Tooltip Position
-	- Position Top
-	- Position left
-	- Position Right
-	- Position Bottom
-* Tooltip Text Color
-* Tooltip Bg Color
-* Grid Settings:
-* Grid Total Columns(1-6)
-* Grid Column Padding Left
-* Grid Column Padding Right
-* Grid Column Margin Bottom
-* Slider Settings:
-* Slider Auto Play Mode Enable/Disable
-* Slider Sliding Speed
-* Slider Stop On Hover Enable/Disable
-* Slider Autoplay Time Out (Sec)
-* Slider Total Items
-* Slider Items for Desktop Small
-* Slider Items for Mobile
-* Slider Loop Enable/Disable
-* Slider Item Margin
-* Navigation Enable/Disable
-* Navigation Position
-	- Top Right
-	- Top Left
-	- Centered
-* Navigation Style
-	- Default Style
-	- Round Style
-* Navigation Color
-* Navigation Background Color
-* Navigation Hover Color
-* Navigation Hover Background Color
-* Pagination Enable/Disable
-* Pagination Style
-	- Round Style
-	- Square Style
-	- Line Style
-* Pagination Position
-	- Position left
-	- Position Center
-	- Position Right
-* Pagination Background Color
-* Pagination Background Active Color
-* And much more.
+* Shortcode: `[logo_showcase id="123"]`
+* Duplicate a showcase in one click
+* Lazy loading and a choice of image size
+* Settings page with an option to remove all data on uninstall
+* Version 4 showcases keep working
 
+= Logo Showcase Pro =
 
-<h3>Pro Version Key Features</h3>
+Pro is a separate paid plugin that includes everything in the free version, plus:
 
-* Unlock All the Features.
-* Online Documentation.
-* No Hidden Charges.
-* 24/7 Dedicated Support Forum.
-* Auto Updated Enabled.
+* **Ticker (marquee) layout:** a continuous scroll, sideways or up and down, with multiple rows and columns
+* **List, table, filter grid and sponsor tiers layouts**
+* **Category filter buttons** with position, shape and color options
+* **Click-to-open popup** with the logo, description and a visit button
+* **Center mode** and **multiple rows** (2 to 4) inside each slide
+* **Logo effects:** grayscale, blur and blur with grayscale, plus zoom-out and lift-up hover animations
+* **Show-from and hide-after dates** for each logo, ideal for sponsors and seasonal campaigns
+* **Click counts** for each logo (anonymous)
+* **Google Fonts** for logo titles
+* More arrow, dot and tooltip options
+* 3 more starter templates: Ticker strip, Filterable grid and Sponsor tiers
+* Import and export showcases as JSON
 
+[See Pro features and live demos](https://themepoints.com/logoshowcase/)
+
+= Perfect for =
+
+* "Trusted by" and client logo sections on landing pages
+* Partner and sponsor walls for events and non-profits
+* "As seen in" press and media logo bars
+* Brand directories and supplier lists
+* Agency and portfolio websites
+* Membership, conference and community sites
+
+= How it works =
+
+1. Open **Logo Showcase** in the admin menu and click **New showcase**, or start from a template.
+2. Upload your logos in one go, add titles and links.
+3. Pick a layout and adjust the look while watching the live preview.
+4. Publish, then add the showcase with the block, the Elementor widget or the shortcode.
+
+= Privacy =
+
+The free plugin does not collect personal data, does not set cookies and does not call external services. In Pro, the optional Google Fonts setting loads a font from Google, and the optional click counter stores only a total per logo.
 
 == Installation ==
 
-1. Install as regular WordPress plugin.
-2. Go your Pluings setting via WordPress Dashboard and activate it.
-3. After activate plugin you will see a new menu on the dashboard left side called Logo Showcase. Click Add Showcase & create your logo showcase list easily & paste this shortcode anywhere your post/page or template to show the logo showcase.<br />
-<br /><br />
-
-<strong>Using FTP</strong>
-1.Extract logo-showcase.zip to your computer.
-2.Upload the logo showcase directory to your wp-content/plugins directory.
-3.After activate plugin you will see "Logo Showcase" menu at left side on WordPress dashboard and find the "Shortcode"
-
-
-
-<strong>How to Display Logo Showcase </strong><br />
-First create a logo showcase list then copy shortcode into shortcode <code>Ex: [logo_showcase id="25"]</code> page and paste into any where your website to display logo showcase. also you can use it into theme file to display logo Showcase .<code>Ex:<?php echo do_shortcode("[logo_showcase id="25"]");?></code>
-
-<br /><br />
-
-
-== Screenshots ==
-
-1. screenshot-1
-2. screenshot-2
-3. screenshot-3
-4. screenshot-4
-5. screenshot-5
-6. screenshot-6
-
-== Upgrade Notice ==
-
+1. In WordPress, go to **Plugins → Add New**, search for **Logo Showcase** and click **Install Now**, then **Activate**. Or upload the plugin folder to `/wp-content/plugins/`.
+2. Open **Logo Showcase** in the admin menu and click **New showcase**.
+3. Click **Add logos** or **Upload files**, or drag images onto the panel.
+4. Choose a layout and adjust the settings. The preview on the right updates as you work.
+5. Click **Save changes**, then copy the shortcode shown at the top, or add the **Logo Showcase** block, or the Elementor widget, to your page.
 
 == Frequently Asked Questions ==
 
-= Does this plugin work with any theme? =
-Yes, Logo Showcase works with all standard WordPress themes.
+= How do I add a logo slider to my page? =
 
-= Is the plugin responsive? =
-Yes, all layouts are fully responsive and mobile-friendly.
+Create a showcase in the Logo Showcase dashboard, then paste its shortcode, for example `[logo_showcase id="123"]`, into any page or post. You can also add the Logo Showcase block in the block editor, or the Logo Showcase widget in Elementor, and choose the showcase from the list.
 
-= Can I show multiple logo showcases on one page? =
-Yes, unlimited shortcodes are supported.
+= Is there a limit on the number of logos? =
 
-= Is coding required? =
-No. Everything is managed via the admin panel.
+No. The free version has no limit on logos or showcases.
 
+= Does it use jQuery? =
 
+No. Version 5 uses a small script written for the plugin, with no jQuery and no slider library. The files load only on pages that contain a showcase.
+
+= Will Logo Showcase slow my site down? =
+
+The plugin is built to be light. Its CSS and JavaScript are small and load only where a showcase appears, images are lazy-loaded by default, and the slider reserves its space so it does not cause layout shift. For best results, upload logos at about twice the display size and choose a suitable image size in the Advanced tab.
+
+= Can I upload many logos at once? =
+
+Yes. Click **Upload files** and choose many images, or drag them onto the Logos panel. Up to three files upload at the same time, and a file that fails does not stop the others.
+
+= How do I make the logo slider autoplay? =
+
+In the Slider tab, turn on **Autoplay** and choose the time between slides. Visitors can pause it with the pause button, and autoplay is turned off for visitors who prefer reduced motion.
+
+= Does it support right-to-left languages like Arabic and Hebrew? =
+
+Yes. In the Layout tab set **Text direction** to Automatic (follows the site language), Right to left or Left to right. Slide direction, arrows and text alignment are mirrored in RTL.
+
+= Does it work with Elementor and the block editor? =
+
+Yes. There is a Logo Showcase block for the block editor and a Logo Showcase widget for Elementor, and the shortcode works in any page builder or widget area.
+
+= Can I show logos in a ticker or marquee? =
+
+The continuous ticker layout, with rows or columns that scroll sideways or up and down, is part of Logo Showcase Pro.
+
+= Can visitors filter logos by category? =
+
+The category filter grid is part of Logo Showcase Pro. Give each logo one or more categories and the plugin adds filter buttons above the grid.
+
+= Can I link each logo to a website? =
+
+Yes. Add a link URL to any logo, and choose whether it opens in a new tab and whether to add rel="nofollow".
+
+= Will my version 4 showcases keep working? =
+
+Yes. Existing shortcodes keep working. Settings are read and converted the first time a showcase is opened or shown, and the old data is not deleted. Back up your site before any major update.
+
+= How do I remove all data when I delete the plugin? =
+
+Open **Logo Showcase → Settings**, turn on **Remove all data on uninstall**, then delete the plugin.
+
+= Where can I get help? =
+
+Read the [documentation](https://themepoints.com/logoshowcase/documentation/), or post in the plugin's support forum on WordPress.org.
+
+== Screenshots ==
+
+1. The dashboard lists every showcase with a preview, its layout and a shortcode to copy.
+2. The editor: upload logos in bulk, reorder them and see a live preview on the right.
+3. Settings for the slider: movement, size, arrows and dots, with the live preview.
+4. Front end: a responsive logo slider and a logo grid.
+5. Pro layouts: ticker, category filter and sponsor tiers.
 
 == Changelog ==
+
+= 5.0.0 =
+
+* New dashboard and editor with live preview for desktop, tablet and mobile.
+* New dependency-free slider and grid. jQuery and Owl Carousel are no longer loaded.
+* Unlimited logos in the free version.
+* Bulk logo upload and drag-and-drop ordering.
+* New slider options: rows, arrows on hover, pointer-following mouse drag.
+* Added border style, logo descriptions and text direction (automatic, RTL, LTR).
+* Added Gutenberg block and Elementor widget.
+* Added starter templates and one-click duplicate.
+* No layout shift: the slider space is reserved in CSS.
+* Accessibility improvements: pause control, reduced motion, keyboard navigation.
+* Settings are stored in a single record per showcase. Version 4 data is migrated automatically and left untouched.
+* Now requires WordPress 6.3 and PHP 7.4.
+
+= 4.0.6 =
+* Fix: Resolved an issue where the logo shortcut block was capped at 8 items.
+* Update: Removed the maximum item limit to allow an unlimited number of logos.
+* Enhancement: Prepared backend code for upcoming drag-and-drop admin interface improvements.
+
+= 4.0.5 =
+* Fix: Add proper nonce verification and user permission checks before processing post meta.
+* Fix: Replace map_deep() with array_map() for full WordPress 4.0.0+ compatibility.
+* Fix: Unslash and sanitize all $_POST array and single meta input fields.
+* Fix: Replaced discouraged strip_tags() with wp_strip_all_tags().
 
 = 4.0.4 =
 * Added: Added New Options.
@@ -396,3 +396,8 @@ No. Everything is managed via the admin panel.
 
 = 1.0 =
 * Initial release
+
+== Upgrade Notice ==
+
+= 5.0.0 =
+Major redesign with a new dashboard, no jQuery and unlimited logos. Back up your site first. Existing shortcodes keep working.

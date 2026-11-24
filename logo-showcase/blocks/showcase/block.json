@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "logo-showcase/showcase",
+	"title": "Logo Showcase",
+	"category": "widgets",
+	"icon": "images-alt2",
+	"description": "Display a logo slider or grid from a showcase you built in Logo Showcase.",
+	"keywords": [ "logo", "slider", "carousel", "sponsors", "clients" ],
+	"textdomain": "logo-showcase",
+	"attributes": {
+		"showcaseId": { "type": "number", "default": 0 }
+	},
+	"supports": { "html": false, "align": [ "wide", "full" ] },
+	"editorScript": "file:./index.js"
+}
